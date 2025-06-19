@@ -20,7 +20,7 @@
 
 2.  **Clone 您的 Fork**：将您复刻的仓库克隆到您的本地电脑。
     ```bash
-    git clone [https://github.com/YOUR-USERNAME/plugin-repo.git](https://github.com/YOUR-USERNAME/plugin-repo.git)
+    git clone https://github.com/YOUR-USERNAME/plugin-repo.git
     cd plugin-repo
     ```
     *(请将 `YOUR-USERNAME` 替换为您自己的 GitHub 用户名)*
@@ -37,7 +37,7 @@
       // ... 其他已有的插件
       {
         "id": "your-github-username.your-plugin-repo-name",
-        "repositoryUrl": "[https://github.com/YOUR-USERNAME/YOUR-PLUGIN-REPO](https://github.com/YOUR-USERNAME/YOUR-PLUGIN-REPO)"
+        "repositoryUrl": "https://github.com/YOUR-USERNAME/YOUR-PLUGIN-REPO"
       }
     ]
     ```
