@@ -2,5 +2,9 @@
   {
     "id": "MaiM-with-u.example-plugin",
     "repositoryUrl": "https://github.com/MaiM-with-u/MaiBot"
+  },
+  {
+    "id": "A0000Xz.MaiBot-Tarots-Plugin",
+    "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Tarots-Plugin"
   }
 ]
