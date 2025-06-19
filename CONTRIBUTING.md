@@ -7,11 +7,11 @@
 在提交您的插件之前，请确保您的插件仓库满足以下**所有要求**：
 
 1.  **代码仓库公开**：您的插件必须是一个公开的 Git 仓库（推荐使用 GitHub）。
-2.  **`manifest.json` 文件**：仓库的根目录下必须包含一个`manifest.json`文件，且文件内容必须符合我们的规范。
+2.  **`_manifest.json` 文件**：仓库的根目录下必须包含一个`_manifest.json`文件，且文件内容必须符合我们的规范。
     -   必需字段：`manifest_version`, `name`, `version`, `description`, `author`, `license`, `host_application`。
     -   `author` 必须是一个包含 `name` 和 `url` 的对象。
     -   `host_application` 必须包含 `min_version` 字段。
-3.  **`LICENSE` 文件**：仓库根目录下必须包含一个`LICENSE`文件，其许可证类型应与`manifest.json`中`license`字段的值一致。
+3.  **`LICENSE` 文件**：仓库根目录下必须包含一个`LICENSE`文件，其许可证类型应与`_manifest.json`中`license`字段的值一致。
 4.  **优秀的 `README.md`**：我们强烈建议您的`README.md`文件包含清晰的功能介绍、使用说明以及至少一张截图或GIF动图。
 
 ## 提交步骤

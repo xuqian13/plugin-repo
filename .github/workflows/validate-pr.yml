@@ -63,14 +63,14 @@ jobs:
           }
 
           function fetchManifest(repoUrl) {
-            // Converts https://github.com/user/repo to https://raw.githubusercontent.com/user/repo/main/manifest.json
-            const rawUrl = repoUrl.replace('github.com', 'raw.githubusercontent.com') + '/main/manifest.json';
+            // Converts https://github.com/user/repo to https://raw.githubusercontent.com/user/repo/main/_manifest.json
+            const rawUrl = repoUrl.replace('github.com', 'raw.githubusercontent.com') + '/main/_manifest.json';
             console.log(`Fetching manifest from: ${rawUrl}`);
 
             return new Promise((resolve, reject) => {
               https.get(rawUrl, res => {
                 if (res.statusCode !== 200) {
-                  return reject(new Error(`Could not fetch manifest.json from repository. Status Code: ${res.statusCode}. Ensure the file exists in the 'main' branch.`));
+                  return reject(new Error(`Could not fetch _manifest.json from repository. Status Code: ${res.statusCode}. Ensure the file exists in the 'main' branch.`));
                 }
                 let data = '';
                 res.on('data', chunk => data += chunk);
@@ -82,13 +82,13 @@ jobs:
           function validateManifest(manifest) {
             const requiredFields = ['manifest_version', 'name', 'version', 'description', 'author', 'license', 'host_application'];
             for (const field of requiredFields) {
-              if (!manifest[field]) throw new Error(`manifest.json is missing required field: '${field}'`);
+              if (!manifest[field]) throw new Error(`_manifest.json is missing required field: '${field}'`);
             }
             if (typeof manifest.author !== 'object' || !manifest.author.name || !manifest.author.url) {
-                throw new Error("manifest.json 'author' field must be an object with 'name' and 'url' properties.");
+                throw new Error("_manifest.json 'author' field must be an object with 'name' and 'url' properties.");
             }
             if (typeof manifest.host_application !== 'object' || !manifest.host_application.min_version) {
-                throw new Error("manifest.json 'host_application' field must be an object with a 'min_version' property.");
+                throw new Error("_manifest.json 'host_application' field must be an object with a 'min_version' property.");
             }
             console.log('Manifest structure is valid.');
           }
