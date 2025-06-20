@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'frontend/**'
+      - 'docs/**'
       - 'plugin_details.json'
       - 'plugins.json'
 
@@ -31,10 +31,10 @@ jobs:  # 构建作业
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Copy data files to frontend
+      - name: Copy data files to docs
         run: |
-          cp plugin_details.json frontend/
-          cp plugins.json frontend/
+          cp plugin_details.json docs/
+          cp plugins.json docs/
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -42,8 +42,8 @@ jobs:  # 构建作业
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 上传 frontend 文件夹
-          path: './frontend'
+          # 上传 docs 文件夹
+          path: './docs'
 
   # 部署作业
   deploy:
