@@ -12,6 +12,9 @@ const pluginCount = document.getElementById('plugin-count');
 
 // 初始化
 document.addEventListener('DOMContentLoaded', async () => {
+    // 确保页面加载时关闭所有可能存在的模态框
+    closeModal();
+    
     await loadPlugins();
     setupEventListeners();
 });
@@ -145,10 +148,32 @@ async function renderPlugins() {
     
     hideEmptyState();
     
-    const pluginCards = await Promise.all(
-        filteredPlugins.map(plugin => createPluginCard(plugin))
-    );
-    pluginsGrid.innerHTML = pluginCards.join('');
+    // 清空现有内容
+    pluginsGrid.innerHTML = '';
+    
+    // 分批渲染卡片，提供更好的用户体验
+    const batchSize = 6;
+    for (let i = 0; i < filteredPlugins.length; i += batchSize) {
+        const batch = filteredPlugins.slice(i, i + batchSize);
+        const pluginCards = await Promise.all(
+            batch.map(plugin => createPluginCard(plugin))
+        );
+        
+        // 创建临时容器并添加动画延迟
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = pluginCards.join('');
+        
+        // 逐个添加卡片到网格中
+        Array.from(tempContainer.children).forEach((card, index) => {
+            card.style.animationDelay = `${(i + index) * 0.1}s`;
+            pluginsGrid.appendChild(card);
+        });
+        
+        // 如果不是最后一批，添加小延迟
+        if (i + batchSize < filteredPlugins.length) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+    }
 }
 
 // 创建插件卡片
@@ -158,41 +183,40 @@ async function createPluginCard(plugin) {
     const repositoryUrl = await getRepositoryUrl(plugin.id);
     
     return `
-        <div class="card bg-base-100 shadow-xl plugin-card border hover:border-primary">
+        <div class="card bg-base-100 shadow-lg plugin-card border hover:border-primary hover:shadow-xl transition-all duration-200 cursor-pointer">
             <div class="card-body">
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="card-title text-lg">
                         <i class="fas fa-puzzle-piece text-primary mr-2"></i>
                         ${escapeHtml(manifest.name)}
                     </h3>
-                    <div class="badge badge-outline">${escapeHtml(manifest.version)}</div>
+                    <div class="badge badge-primary badge-outline">${escapeHtml(manifest.version)}</div>
                 </div>
                 
-                <p class="text-sm text-base-content/70 mb-3 line-clamp-2">
+                <p class="text-sm text-base-content/70 mb-3 line-clamp-3">
                     ${escapeHtml(manifest.description)}
                 </p>
                 
                 <div class="flex items-center mb-3">
                     <i class="fas fa-user text-sm text-base-content/60 mr-2"></i>
-                    <a href="${escapeHtml(manifest.author.url)}" target="_blank" 
-                       class="text-sm hover:text-primary transition-colors">
+                    <span class="text-sm text-base-content/80">
                         ${escapeHtml(manifest.author.name)}
-                    </a>
+                    </span>
                 </div>
                 
                 <div class="mb-3">
                     <div class="flex items-center mb-1">
                         <i class="fas fa-cog text-sm text-base-content/60 mr-2"></i>
-                        <span class="text-sm">兼容版本: ${escapeHtml(manifest.host_application.min_version)}</span>
+                        <span class="text-xs text-base-content/70">兼容: ${escapeHtml(manifest.host_application.min_version)}+</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-balance-scale text-sm text-base-content/60 mr-2"></i>
-                        <span class="text-sm">${escapeHtml(manifest.license)}</span>
+                        <span class="text-xs text-base-content/70">${escapeHtml(manifest.license)}</span>
                     </div>
                 </div>
                 
                 ${keywords.length > 0 ? `
-                    <div class="mb-3">
+                    <div class="mb-4">
                         <div class="flex flex-wrap gap-1">
                             ${keywords.slice(0, 3).map(keyword => 
                                 `<span class="badge badge-secondary badge-sm">${escapeHtml(keyword)}</span>`
@@ -205,17 +229,19 @@ async function createPluginCard(plugin) {
                     </div>
                 ` : ''}
                 
-                <div class="card-actions justify-end">
-                    ${repositoryUrl ? `
-                        <a href="${escapeHtml(repositoryUrl)}" target="_blank" 
-                           class="btn btn-primary btn-sm">
-                            <i class="fab fa-github mr-1"></i>
-                            查看源码
-                        </a>
-                    ` : ''}
-                    <button class="btn btn-outline btn-sm" onclick="showPluginDetails('${escapeHtml(plugin.id)}')">
+                <div class="card-actions justify-between items-center">
+                    <div class="flex gap-2">
+                        ${repositoryUrl ? `
+                            <a href="${escapeHtml(repositoryUrl)}" target="_blank" 
+                               class="btn btn-outline btn-xs" onclick="event.stopPropagation();">
+                                <i class="fab fa-github mr-1"></i>
+                                源码
+                            </a>
+                        ` : ''}
+                    </div>
+                    <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); showPluginDetails('${escapeHtml(plugin.id)}')">
                         <i class="fas fa-info-circle mr-1"></i>
-                        详情
+                        查看详情
                     </button>
                 </div>
             </div>
@@ -255,14 +281,22 @@ function showPluginDetails(pluginId) {
         return;
     }
     
+    // 先关闭已存在的模态框
+    closeModal();
+    
     const { manifest } = plugin;
     const modalContent = `
-        <div class="modal modal-open">
+        <div class="modal modal-open" id="plugin-detail-modal">
             <div class="modal-box max-w-2xl">
-                <h3 class="font-bold text-lg mb-4">
-                    <i class="fas fa-puzzle-piece text-primary mr-2"></i>
-                    ${escapeHtml(manifest.name)}
-                </h3>
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-lg">
+                        <i class="fas fa-puzzle-piece text-primary mr-2"></i>
+                        ${escapeHtml(manifest.name)}
+                    </h3>
+                    <button class="btn btn-sm btn-circle btn-ghost" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div class="stat bg-base-200 rounded-lg">
@@ -315,22 +349,37 @@ function showPluginDetails(pluginId) {
                         </div>
                     </div>
                 ` : ''}
-                
-                <div class="modal-action">
-                    <button class="btn btn-primary" onclick="closeModal()">关闭</button>
+                  <div class="modal-action">
+                    <button class="btn btn-outline" onclick="closeModal()">
+                        <i class="fas fa-times mr-1"></i>
+                        关闭
+                    </button>
                 </div>
             </div>
+            <div class="modal-backdrop" onclick="closeModal()"></div>
         </div>
     `;
     
     document.body.insertAdjacentHTML('beforeend', modalContent);
+    
+    // 添加键盘支持（ESC键关闭）
+    document.addEventListener('keydown', handleModalKeydown);
+}
+
+// 处理模态框键盘事件
+function handleModalKeydown(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
 }
 
 // 关闭模态框
 function closeModal() {
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector('#plugin-detail-modal');
     if (modal) {
         modal.remove();
+        // 移除键盘事件监听器
+        document.removeEventListener('keydown', handleModalKeydown);
     }
 }
 

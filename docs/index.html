@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaiBot 插件仓库</title>    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <link rel="stylesheet" href="css/style.css">    
     <style>
         .plugin-card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
         .plugin-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .plugin-card .card-body:hover {
+            background: rgba(var(--p), 0.05);
         }
         .tag {
             display: inline-block;
@@ -21,6 +25,44 @@
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 500;
+        }        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* 模态框动画 */
+        .modal {
+            animation: modalFadeIn 0.2s ease-out;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* 卡片加载动画 */
+        .plugin-card {
+            animation: cardSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes cardSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -103,14 +145,15 @@
                     </select>
                 </div>
             </div>
-        </div>
-
-        <!-- 插件列表 -->
+        </div>        <!-- 插件列表 -->
         <div id="plugins" class="mb-8">
-            <h2 class="text-3xl font-bold mb-6 text-center">
+            <h2 class="text-3xl font-bold mb-2 text-center">
                 <i class="fas fa-th-large mr-2"></i>
                 插件列表
             </h2>
+            <p class="text-center text-base-content/70 mb-6">
+                点击插件卡片的"查看详情"按钮了解更多信息
+            </p>
             <div id="plugins-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- 插件卡片将通过 JavaScript 动态生成 -->
             </div>
