@@ -124,15 +124,19 @@ function compareVersions(a, b) {
         const aPart = aParts[i] || 0;
         const bPart = bParts[i] || 0;
         
-        if (aPart > bPart) return 1;
-        if (aPart < bPart) return -1;
+        if (aPart > bPart) {
+            return 1;
+        }
+        if (aPart < bPart) {
+            return -1;
+        }
     }
     
     return 0;
 }
 
 // 渲染插件列表
-function renderPlugins() {
+async function renderPlugins() {
     if (filteredPlugins.length === 0) {
         pluginsGrid.innerHTML = '';
         showEmptyState();
@@ -141,14 +145,17 @@ function renderPlugins() {
     
     hideEmptyState();
     
-    pluginsGrid.innerHTML = filteredPlugins.map(plugin => createPluginCard(plugin)).join('');
+    const pluginCards = await Promise.all(
+        filteredPlugins.map(plugin => createPluginCard(plugin))
+    );
+    pluginsGrid.innerHTML = pluginCards.join('');
 }
 
 // 创建插件卡片
-function createPluginCard(plugin) {
-    const manifest = plugin.manifest;
+async function createPluginCard(plugin) {
+    const { manifest } = plugin;
     const keywords = manifest.keywords || [];
-    const repositoryUrl = getRepositoryUrl(plugin.id);
+    const repositoryUrl = await getRepositoryUrl(plugin.id);
     
     return `
         <div class="card bg-base-100 shadow-xl plugin-card border hover:border-primary">
@@ -239,97 +246,6 @@ async function getRepositoryUrl(pluginId) {
     
     console.warn('无法获取原始插件数据，所有数据源都失败');
     return null;
-}
-
-// 渲染插件列表
-async function renderPlugins() {
-    if (filteredPlugins.length === 0) {
-        pluginsGrid.innerHTML = '';
-        showEmptyState();
-        return;
-    }
-    
-    hideEmptyState();
-    
-    const pluginCards = await Promise.all(
-        filteredPlugins.map(plugin => createPluginCard(plugin))
-    );
-    pluginsGrid.innerHTML = pluginCards.join('');
-}
-
-// 创建插件卡片
-async function createPluginCard(plugin) {
-    const { manifest } = plugin;
-    const keywords = manifest.keywords || [];
-    const repositoryUrl = await getRepositoryUrl(plugin.id);
-    const modalContent = `
-        <div class="modal modal-open">
-            <div class="modal-box max-w-2xl">
-                <h3 class="font-bold text-lg mb-4">
-                    <i class="fas fa-puzzle-piece text-primary mr-2"></i>
-                    ${escapeHtml(manifest.name)}
-                </h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div class="stat bg-base-200 rounded-lg">
-                        <div class="stat-title">版本</div>
-                        <div class="stat-value text-primary text-lg">${escapeHtml(manifest.version)}</div>
-                    </div>
-                    <div class="stat bg-base-200 rounded-lg">
-                        <div class="stat-title">协议版本</div>
-                        <div class="stat-value text-lg">${escapeHtml(manifest.manifest_version)}</div>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2">描述</h4>
-                    <p class="text-base-content/80">${escapeHtml(manifest.description)}</p>
-                </div>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2">作者信息</h4>
-                    <div class="flex items-center">
-                        <i class="fas fa-user mr-2 text-base-content/60"></i>
-                        <a href="${escapeHtml(manifest.author.url)}" target="_blank" 
-                           class="link link-primary">${escapeHtml(manifest.author.name)}</a>
-                    </div>
-                </div>
-                
-                <div class="mb-4">
-                    <h4 class="font-semibold mb-2">兼容性</h4>
-                    <div class="bg-base-200 p-3 rounded-lg">
-                        <div class="flex items-center">
-                            <i class="fas fa-cog mr-2 text-base-content/60"></i>
-                            <span>最低版本: ${escapeHtml(manifest.host_application.min_version)}</span>
-                        </div>
-                        ${manifest.host_application.max_version ? `
-                            <div class="flex items-center mt-1">
-                                <i class="fas fa-cog mr-2 text-base-content/60"></i>
-                                <span>最高版本: ${escapeHtml(manifest.host_application.max_version)}</span>
-                            </div>
-                        ` : ''}
-                    </div>
-                </div>
-                
-                ${manifest.keywords && manifest.keywords.length > 0 ? `
-                    <div class="mb-4">
-                        <h4 class="font-semibold mb-2">标签</h4>
-                        <div class="flex flex-wrap gap-2">
-                            ${manifest.keywords.map(keyword => 
-                                `<span class="badge badge-secondary">${escapeHtml(keyword)}</span>`
-                            ).join('')}
-                        </div>
-                    </div>
-                ` : ''}
-                
-                <div class="modal-action">
-                    <button class="btn btn-primary" onclick="closeModal()">关闭</button>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    document.body.insertAdjacentHTML('beforeend', modalContent);
 }
 
 // 显示插件详情模态框
