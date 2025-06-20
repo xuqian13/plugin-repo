@@ -18,20 +18,40 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // 加载插件数据
 async function loadPlugins() {
-    try {
-        const response = await fetch('https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugin_details.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    const urls = [
+        'https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugin_details.json',
+        // 备用 URL，如果主 URL 失败
+        'https://cdn.jsdelivr.net/gh/MaiM-with-u/plugin-repo@main/plugin_details.json'
+    ];
+    
+    for (const url of urls) {
+        try {
+            console.log('正在从以下地址加载插件数据:', url);
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            allPlugins = await response.json();
+            filteredPlugins = [...allPlugins];
+            
+            pluginCount.textContent = allPlugins.length;
+            renderPlugins();
+            hideLoading();
+            console.log('✅ 插件数据加载成功');
+            return;
+        } catch (error) {
+            console.warn(`从 ${url} 加载失败:`, error);
+            continue;
         }
-        allPlugins = await response.json();
-        filteredPlugins = [...allPlugins];
-        
-        pluginCount.textContent = allPlugins.length;
-        renderPlugins();
-        hideLoading();
+    }
+    
+    // 如果所有 URL 都失败了
+    try {
+        throw new Error('无法从任何数据源加载插件数据');
     } catch (error) {
         console.error('加载插件数据失败:', error);
-        showError('加载插件数据失败，请稍后重试。');
+        showError('加载插件数据失败，请稍后重试。可能是网络问题或数据源暂不可用。');
         hideLoading();
     }
 }
@@ -198,16 +218,27 @@ function createPluginCard(plugin) {
 
 // 获取仓库 URL（从插件 ID 推断或从原始数据获取）
 async function getRepositoryUrl(pluginId) {
-    try {
-        // 尝试从原始的 plugins.json 获取仓库 URL
-        const response = await fetch('https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugins.json');
-        const plugins = await response.json();
-        const plugin = plugins.find(p => p.id === pluginId);
-        return plugin ? plugin.repositoryUrl : null;
-    } catch (error) {
-        console.warn('无法获取原始插件数据:', error);
-        return null;
+    const urls = [
+        'https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugins.json',
+        'https://cdn.jsdelivr.net/gh/MaiM-with-u/plugin-repo@main/plugins.json'
+    ];
+    
+    for (const url of urls) {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const plugins = await response.json();
+                const plugin = plugins.find(p => p.id === pluginId);
+                return plugin ? plugin.repositoryUrl : null;
+            }
+        } catch (error) {
+            console.warn(`从 ${url} 获取插件数据失败:`, error);
+            continue;
+        }
     }
+    
+    console.warn('无法获取原始插件数据，所有数据源都失败');
+    return null;
 }
 
 // 渲染插件列表
