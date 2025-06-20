@@ -48,8 +48,7 @@
                 transform: scale(1);
             }
         }
-        
-        /* 卡片加载动画 */
+          /* 卡片加载动画 */
         .plugin-card {
             animation: cardSlideIn 0.3s ease-out;
         }
@@ -63,6 +62,16 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        
+        /* 禁用 stats 组件的默认悬停效果 */
+        .stats {
+            pointer-events: none;
+        }
+        
+        .stats .stat {
+            pointer-events: none;
+            cursor: default;
         }
     </style>
 </head>
