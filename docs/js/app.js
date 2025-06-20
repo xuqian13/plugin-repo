@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // 加载插件数据
 async function loadPlugins() {
     try {
-        const response = await fetch('../plugin_details.json');
+        const response = await fetch('https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugin_details.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -200,7 +200,7 @@ function createPluginCard(plugin) {
 async function getRepositoryUrl(pluginId) {
     try {
         // 尝试从原始的 plugins.json 获取仓库 URL
-        const response = await fetch('./plugins.json');
+        const response = await fetch('https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugins.json');
         const plugins = await response.json();
         const plugin = plugins.find(p => p.id === pluginId);
         return plugin ? plugin.repositoryUrl : null;
