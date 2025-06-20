@@ -10,5 +10,9 @@
   {
     "id": "ShiinaWhite.MaiBot-Roulette-Plugin",
     "repositoryUrl": "https://github.com/ShiinaWhite/MaiBot-Roulette-Plugins"
+  },
+  {
+    "id": "Schxar.MaiBot-DoubaoSearch-Plugin",
+    "repositoryUrl": "https://github.com/schxar/doubao_search_plugin"
   }
 ]
