@@ -34,9 +34,9 @@
     "id": "ShiinaWhite.MaiBot-Roulette-Plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "russian_roulette",
+      "name": "麦麦轮盘",
       "version": "1.0.0",
-      "description": "麦麦轮盘插件",
+      "description": "在命运的舞台上，勇士们围坐一圈，手中紧握那把只装有一颗子弹的左轮手枪。每一次扣动扳机，都是对勇气与命运的挑战。枪声响起，欢笑与紧张交织，荣耀与沉默只在一瞬之间。谁会成为这场故事的主角？谁会是下一个被命运选中的人？",
       "author": {
         "name": "野生的金属乌帕",
         "url": "https://github.com/ShiinaWhite"
@@ -61,6 +61,71 @@
       "repository_url": "https://github.com/ShiinaWhite/MaiBot-Roulette-Plugins",
       "default_locale": "zh-CN",
       "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "Schxar.MaiBot-DoubaoSearch-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "豆包搜索插件 (Doubao Search Plugin)",
+      "version": "1.0.0",
+      "description": "基于火山引擎豆包模型的AI搜索插件，支持智能LLM判定和高效搜索功能。",
+      "author": {
+        "name": "MaiBot团队",
+        "url": "https://github.com/MaiM-with-u"
+      },
+      "license": "GPL-v3.0-or-later",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/MaiM-with-u/maibot",
+      "repository_url": "https://github.com/MaiM-with-u/maibot",
+      "keywords": [
+        "ai",
+        "search",
+        "doubao",
+        "volcengine",
+        "query"
+      ],
+      "categories": [
+        "AI Tools",
+        "Search",
+        "Content Retrieval"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": true,
+        "plugin_type": "content_retrieval",
+        "api_dependencies": [
+          "volcengine"
+        ],
+        "components": [
+          {
+            "type": "action",
+            "name": "doubao_search_action",
+            "description": "根据描述使用火山引擎豆包API生成搜索结果",
+            "activation_modes": [
+              "llm_judge",
+              "keyword"
+            ],
+            "keywords": [
+              "搜索",
+              "查询",
+              "查找",
+              "search",
+              "find"
+            ]
+          }
+        ],
+        "features": [
+          "智能LLM判定生成时机",
+          "高效AI搜索功能",
+          "结果缓存机制",
+          "完整的错误处理"
+        ]
+      }
     }
   }
 ]
