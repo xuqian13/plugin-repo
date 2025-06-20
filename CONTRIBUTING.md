@@ -11,8 +11,8 @@
     -   必需字段：`manifest_version`, `name`, `version`, `description`, `author`, `license`, `host_application`。
     -   `author` 必须是一个包含 `name` 和 `url` 的对象。
     -   `host_application` 必须包含 `min_version` 字段。
-    
-    **`_manifest.json`**文件详解：[链接](https://docs.mai-mai.org/develop/plugin_develop/manifest-guide.html#%F0%9F%93%8B-%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E)
+
+    **`_manifest.json`文件详解**：[链接](https://docs.mai-mai.org/develop/plugin_develop/manifest-guide.html#%F0%9F%93%8B-%E5%AD%97%E6%AE%B5%E8%AF%B4%E6%98%8E)
 3.  **`LICENSE` 文件**：仓库根目录下必须包含一个`LICENSE`文件，其许可证类型应与`_manifest.json`中`license`字段的值一致。
 4.  **优秀的 `README.md`**：我们强烈建议您的`README.md`文件包含清晰的功能介绍、使用说明以及至少一张截图或GIF动图。
 
