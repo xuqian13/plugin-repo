@@ -22,5 +22,9 @@
   {
     "id": "ZmasCloud.makeplugin",
     "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
+  },
+  {
+    "id": "ZmasCloud.bingsearch",
+    "repositoryUrl": "https://github.com/ZmasCloud/bingsearch"
   }
 ]
