@@ -134,7 +134,7 @@
       "manifest_version": 1,
       "name": "硅基流动生图插件",
       "version": "0.4",
-      "description": "{plugin_name},发送图片的插件动作，支持通过硅基流动生成图片并发送，兼容base64图片返回方式。",
+      "description": "发送图片的插件动作，支持通过硅基流动生成图片并发送，兼容base64图片返回方式。",
       "author": {
         "name": "yishang/一闪",
         "url": "https://github.com/minecraft1024a"
@@ -168,6 +168,24 @@
             "description": "发送图片的插件动作，支持通过硅基流动生成图片并发送"
           }
         ]
+      }
+    }
+  },
+  {
+    "id": "ZmasCloud.makeplugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "麦麦插件生成器",
+      "version": "0.0.4",
+      "description": "让你的麦麦给你写麦麦v0.1插件！",
+      "author": {
+        "name": "zmas",
+        "url": "https://bgithub.xyz/ZmasCloud"
+      },
+      "license": "AGPL-3.0",
+      "host_application": {
+        "min_version": "0.7.0",
+        "max_version": "0.7.9"
       }
     }
   }
