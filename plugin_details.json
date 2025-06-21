@@ -71,7 +71,7 @@
       "version": "1.0.0",
       "description": "基于火山引擎豆包模型的AI搜索插件，支持智能LLM判定和高效搜索功能。",
       "author": {
-        "name": "MaiBot团队",
+        "name": "Schxar",
         "url": "https://github.com/MaiM-with-u"
       },
       "license": "GPL-v3.0-or-later",
@@ -124,6 +124,49 @@
           "高效AI搜索功能",
           "结果缓存机制",
           "完整的错误处理"
+        ]
+      }
+    }
+  },
+  {
+    "id": "minecraft1024a.MaiBot-Send-Image-Plugin-SF",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "硅基流动生图插件",
+      "version": "0.4",
+      "description": "{plugin_name},发送图片的插件动作，支持通过硅基流动生成图片并发送，兼容base64图片返回方式。",
+      "author": {
+        "name": "yishang/一闪",
+        "url": "https://github.com/minecraft1024a"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/minecraft1024a/send_image_plugin_sf",
+      "repository_url": "https://github.com/minecraft1024a/send_image_plugin_sf",
+      "keywords": [
+        "生成图片",
+        "画图",
+        "create image",
+        "draw"
+      ],
+      "categories": [
+        "image",
+        "action"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "send_image_action",
+            "description": "发送图片的插件动作，支持通过硅基流动生成图片并发送"
+          }
         ]
       }
     }
