@@ -24,6 +24,10 @@
     "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
   },
   {
+    "id": "TT-P607.MaiMbot-Pixiv-Setu-Plugin",
+    "repositoryUrl": "https://github.com/tt-P607/MaiMbot-Pixiv-Setu-Plugin"
+  },
+  {
     "id": "ZmasCloud.bingsearch",
     "repositoryUrl": "https://github.com/ZmasCloud/bingsearch"
   }
