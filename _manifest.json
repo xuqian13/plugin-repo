@@ -5,11 +5,11 @@
   "description": "让你的麦麦给你写麦麦v0.1插件！",
   "author": {
     "name": "zmas"
-  },
-  {
+    "url": "https://bgithub.xyz/ZmasCloud"
   "license": "AGPL-3.0",
   "host_application": {
     "min_version": "1.0.0",
     "max_version": "4.0.0"
+  }
   }
 }
