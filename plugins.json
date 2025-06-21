@@ -30,5 +30,9 @@
   {
     "id": "ZmasCloud.bingsearch",
     "repositoryUrl": "https://github.com/ZmasCloud/bingsearch"
+  },
+  {
+    "id": "A0000Xz.MaiBot-Curfew-Plugin",
+    "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Curfew-Plugin"
   }
 ]
