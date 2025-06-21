@@ -20,12 +20,11 @@
     "repositoryUrl": "https://github.com/minecraft1024a/MaiBot-Send-Image-Plugin-SF"
   },
   {
-<<<<<<< HEAD
-    "id": "tt-P607.MaiMbot-Pixiv-Setu-Plugin",
-    "repositoryUrl": "https://github.com/tt-P607/MaiMbot-Pixiv-Setu-Plugin"
-=======
     "id": "ZmasCloud.makeplugin",
     "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
->>>>>>> 6e222da252634f753d3b17b620390280255dc756
+  },
+  {
+    "id": "TT-P607.MaiMbot-Pixiv-Setu-Plugin",
+    "repositoryUrl": "https://github.com/tt-P607/MaiMbot-Pixiv-Setu-Plugin"
   }
 ]
