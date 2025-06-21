@@ -188,5 +188,23 @@
         "max_version": "0.7.9"
       }
     }
+  },
+  {
+    "id": "ZmasCloud.bingsearch",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "bing搜索插件",
+      "version": "0.0.4",
+      "description": "让你的麦麦免费联网搜索！",
+      "author": {
+        "name": "zmas",
+        "url": "https://github.com/ZmasCloud"
+      },
+      "license": "AGPL-3.0",
+      "host_application": {
+        "min_version": "0.7.0",
+        "max_version": "0.7.3"
+      }
+    }
   }
 ]
