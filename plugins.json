@@ -34,5 +34,9 @@
   {
     "id": "A0000Xz.MaiBot-Curfew-Plugin",
     "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Curfew-Plugin"
+  },
+  {
+    "id": "A0000Xz.MaiBot-AntiPoke-Plugin",
+    "repositoryUrl": "https://github.com/A0000Xz/MaiBot-AntiPoke-Plugin"
   }
 ]
