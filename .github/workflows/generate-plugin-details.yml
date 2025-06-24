@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'plugins.json'
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   generate-details:
