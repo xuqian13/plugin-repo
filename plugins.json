@@ -10,5 +10,37 @@
   {
     "id": "ShiinaWhite.MaiBot-Roulette-Plugin",
     "repositoryUrl": "https://github.com/ShiinaWhite/MaiBot-Roulette-Plugins"
+  },
+  {
+    "id": "Schxar.MaiBot-DoubaoSearch-Plugin",
+    "repositoryUrl": "https://github.com/schxar/doubao_search_plugin"
+  },
+  {
+    "id": "minecraft1024a.MaiBot-Send-Image-Plugin-SF",
+    "repositoryUrl": "https://github.com/minecraft1024a/MaiBot-Send-Image-Plugin-SF"
+  },
+  {
+    "id": "ZmasCloud.makeplugin",
+    "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
+  },
+  {
+    "id": "TT-P607.MaiMbot-Pixiv-Setu-Plugin",
+    "repositoryUrl": "https://github.com/tt-P607/MaiMbot-Pixiv-Setu-Plugin"
+  },
+  {
+    "id": "ZmasCloud.bingsearch",
+    "repositoryUrl": "https://github.com/ZmasCloud/bingsearch"
+  },
+  {
+    "id": "A0000Xz.MaiBot-Curfew-Plugin",
+    "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Curfew-Plugin"
+  },
+  {
+    "id": "A0000Xz.MaiBot-AntiPoke-Plugin",
+    "repositoryUrl": "https://github.com/A0000Xz/MaiBot-AntiPoke-Plugin"
+  },
+  {
+    "id": "xuqian13.music_plugin",
+    "repositoryUrl": "https://github.com/xuqian13/music_plugin"
   }
 ]
