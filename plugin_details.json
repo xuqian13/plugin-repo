@@ -468,5 +468,64 @@
         ]
       }
     }
+  },
+  {
+    "id": "schxar.music_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "music_plugin",
+      "version": "1.0.0",
+      "description": "网易云音乐点歌插件，支持Napcat小程序卡片、详细美化回复、B站视频推荐等多种功能。",
+      "author": {
+        "name": "Schxar",
+        "url": "https://github.com/schxar"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/schxar/music_plugin",
+      "repository_url": "https://github.com/schxar/music_plugin",
+      "keywords": [
+        "music",
+        "netease",
+        "点歌",
+        "napcat",
+        "bilibili"
+      ],
+      "categories": [
+        "娱乐",
+        "音乐"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "music_search",
+            "description": "网易云音乐搜索与点歌"
+          },
+          {
+            "type": "action",
+            "name": "bilibili_random_video",
+            "description": "B站UP主随机视频推荐"
+          },
+          {
+            "type": "command",
+            "name": "music",
+            "description": "/music 点歌命令"
+          },
+          {
+            "type": "command",
+            "name": "test_napcat_card",
+            "description": "Napcat音乐卡片推送测试"
+          }
+        ]
+      }
+    }
   }
 ]
