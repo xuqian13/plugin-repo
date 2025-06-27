@@ -3,9 +3,9 @@
     "id": "A0000Xz.MaiBot-Tarots-Plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "tarots_plugin",
-      "version": "0.9.6",
-      "description": "塔罗牌插件，提供了抽塔罗牌占卜功能，具有模拟人类的调用方式和独特自定义风格的解牌回复。牌面为B站幻星集",
+      "name": "塔罗牌插件",
+      "version": "0.9.7",
+      "description": "提供了抽塔罗牌占卜功能，具有模拟人类的调用方式和独特自定义风格的解牌回复。牌面为B站幻星集",
       "author": {
         "name": "A肆零西烛",
         "url": "https://github.com/A0000Xz"
@@ -300,9 +300,9 @@
     "id": "A0000Xz.MaiBot-Curfew-Plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "curfew_plugin",
-      "version": "0.6.0",
-      "description": "宵禁插件，在机器人是QQ群聊管理员的情况下实现了自动宵禁功能",
+      "name": "宵禁插件",
+      "version": "0.8.0",
+      "description": "在机器人是QQ群聊管理员的情况下实现了自动宵禁功能",
       "author": {
         "name": "A肆零西烛",
         "url": "https://github.com/A0000Xz"
@@ -334,9 +334,9 @@
     "id": "A0000Xz.MaiBot-AntiPoke-Plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "anti_poke_plugin",
-      "version": "0.6.0",
-      "description": "防戳插件，在帮助你的麦麦实现人性化戳一戳互动的同时，避免过多戳一戳捣乱",
+      "name": "防戳插件",
+      "version": "0.9.9",
+      "description": "帮助你的麦麦实现人性化戳一戳互动的同时，避免过多戳一戳捣乱",
       "author": {
         "name": "A肆零西烛",
         "url": "https://github.com/A0000Xz"
@@ -358,6 +358,174 @@
       "repository_url": "https://github.com/A0000Xz/MaiBot-AntiPoke-Plugin",
       "default_locale": "zh-CN",
       "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "xuqian13.music_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "网易云点歌插件",
+      "version": "0.1.0",
+      "description": "基于网易云音乐API的智能点歌插件，支持音乐搜索和点歌功能",
+      "author": {
+        "name": "靓仔",
+        "url": "https://github.com/xuqian13"
+      },
+      "license": "AGPL-3.0",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/xuqian13",
+      "repository_url": "https://github.com/xuqian13/music_plugin",
+      "keywords": [
+        "听歌",
+        "点歌",
+        "music",
+        "song"
+      ],
+      "categories": [
+        "music"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "music_plugin",
+            "description": "基于网易云音乐API的智能点歌插件，支持音乐搜索和点歌功能。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "Schxar.Maibot-Doubao_pic_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "豆包图片生成插件 (Doubao Image Generator)",
+      "version": "2.0.1",
+      "description": "基于火山引擎豆包模型的AI图片生成插件，支持智能LLM判定、高质量图片生成、结果缓存和多尺寸支持。",
+      "author": {
+        "name": "Schxar",
+        "url": "https://github.com/schxar/doubao_pic_plugin"
+      },
+      "license": "GPL-v3.0-or-later",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/schxar/doubao_pic_plugin",
+      "repository_url": "https://github.com/schxar/doubao_pic_plugin",
+      "keywords": [
+        "ai",
+        "image",
+        "generation",
+        "doubao",
+        "volcengine",
+        "art"
+      ],
+      "categories": [
+        "AI Tools",
+        "Image Processing",
+        "Content Generation"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": true,
+        "plugin_type": "content_generator",
+        "api_dependencies": [
+          "volcengine"
+        ],
+        "components": [
+          {
+            "type": "action",
+            "name": "doubao_image_generation",
+            "description": "根据描述使用火山引擎豆包API生成高质量图片",
+            "activation_modes": [
+              "llm_judge",
+              "keyword"
+            ],
+            "keywords": [
+              "画",
+              "图片",
+              "生成",
+              "画画",
+              "绘制"
+            ]
+          }
+        ],
+        "features": [
+          "智能LLM判定生成时机",
+          "高质量AI图片生成",
+          "结果缓存机制",
+          "多种图片尺寸支持",
+          "完整的错误处理"
+        ]
+      }
+    }
+  },
+  {
+    "id": "schxar.music_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "music_plugin",
+      "version": "1.0.0",
+      "description": "网易云音乐点歌插件，支持Napcat小程序卡片、详细美化回复、B站视频推荐等多种功能。",
+      "author": {
+        "name": "Schxar",
+        "url": "https://github.com/schxar"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.0"
+      },
+      "homepage_url": "https://github.com/schxar/music_plugin",
+      "repository_url": "https://github.com/schxar/music_plugin",
+      "keywords": [
+        "music",
+        "netease",
+        "点歌",
+        "napcat",
+        "bilibili"
+      ],
+      "categories": [
+        "娱乐",
+        "音乐"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "music_search",
+            "description": "网易云音乐搜索与点歌"
+          },
+          {
+            "type": "action",
+            "name": "bilibili_random_video",
+            "description": "B站UP主随机视频推荐"
+          },
+          {
+            "type": "command",
+            "name": "music",
+            "description": "/music 点歌命令"
+          },
+          {
+            "type": "command",
+            "name": "test_napcat_card",
+            "description": "Napcat音乐卡片推送测试"
+          }
+        ]
+      }
     }
   }
 ]

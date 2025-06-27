@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - 'plugins.json'
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   generate-details:
