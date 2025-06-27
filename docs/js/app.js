@@ -14,7 +14,7 @@ const pluginCount = document.getElementById('plugin-count');
 document.addEventListener('DOMContentLoaded', async () => {
     // 确保页面加载时关闭所有可能存在的模态框
     closeModal();
-    
+
     await loadPlugins();
     setupEventListeners();
 });
@@ -26,7 +26,7 @@ async function loadPlugins() {
         // 备用 URL，如果主 URL 失败
         'https://cdn.jsdelivr.net/gh/MaiM-with-u/plugin-repo@main/plugin_details.json'
     ];
-    
+
     for (const url of urls) {
         try {
             console.log('正在从以下地址加载插件数据:', url);
@@ -34,10 +34,10 @@ async function loadPlugins() {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             allPlugins = await response.json();
             filteredPlugins = [...allPlugins];
-            
+
             pluginCount.textContent = allPlugins.length;
             renderPlugins();
             hideLoading();
@@ -48,7 +48,7 @@ async function loadPlugins() {
             continue;
         }
     }
-    
+
     // 如果所有 URL 都失败了
     try {
         throw new Error('无法从任何数据源加载插件数据');
@@ -81,27 +81,27 @@ function debounce(func, wait) {
 // 处理搜索
 function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
-    
+
     if (searchTerm === '') {
         filteredPlugins = [...allPlugins];
     } else {
-        filteredPlugins = allPlugins.filter(plugin => 
+        filteredPlugins = allPlugins.filter(plugin =>
             plugin.manifest.name.toLowerCase().includes(searchTerm) ||
             plugin.manifest.description.toLowerCase().includes(searchTerm) ||
             plugin.manifest.author.name.toLowerCase().includes(searchTerm) ||
-            (plugin.manifest.keywords || []).some(keyword => 
+            (plugin.manifest.keywords || []).some(keyword =>
                 keyword.toLowerCase().includes(searchTerm)
             )
         );
     }
-    
+
     renderPlugins();
 }
 
 // 处理排序
 function handleSort() {
     const sortBy = sortSelect.value;
-    
+
     filteredPlugins.sort((a, b) => {
         switch (sortBy) {
             case 'name':
@@ -114,7 +114,7 @@ function handleSort() {
                 return 0;
         }
     });
-    
+
     renderPlugins();
 }
 
@@ -122,11 +122,11 @@ function handleSort() {
 function compareVersions(a, b) {
     const aParts = a.split('.').map(Number);
     const bParts = b.split('.').map(Number);
-    
+
     for (let i = 0; i < Math.max(aParts.length, bParts.length); i++) {
         const aPart = aParts[i] || 0;
         const bPart = bParts[i] || 0;
-        
+
         if (aPart > bPart) {
             return 1;
         }
@@ -134,7 +134,7 @@ function compareVersions(a, b) {
             return -1;
         }
     }
-    
+
     return 0;
 }
 
@@ -145,12 +145,12 @@ async function renderPlugins() {
         showEmptyState();
         return;
     }
-    
+
     hideEmptyState();
-    
+
     // 清空现有内容
     pluginsGrid.innerHTML = '';
-    
+
     // 分批渲染卡片，提供更好的用户体验
     const batchSize = 6;
     for (let i = 0; i < filteredPlugins.length; i += batchSize) {
@@ -158,17 +158,17 @@ async function renderPlugins() {
         const pluginCards = await Promise.all(
             batch.map(plugin => createPluginCard(plugin))
         );
-        
+
         // 创建临时容器并添加动画延迟
         const tempContainer = document.createElement('div');
         tempContainer.innerHTML = pluginCards.join('');
-        
+
         // 逐个添加卡片到网格中
         Array.from(tempContainer.children).forEach((card, index) => {
             card.style.animationDelay = `${(i + index) * 0.1}s`;
             pluginsGrid.appendChild(card);
         });
-        
+
         // 如果不是最后一批，添加小延迟
         if (i + batchSize < filteredPlugins.length) {
             await new Promise(resolve => setTimeout(resolve, 100));
@@ -181,7 +181,7 @@ async function createPluginCard(plugin) {
     const { manifest } = plugin;
     const keywords = manifest.keywords || [];
     const repositoryUrl = await getRepositoryUrl(plugin.id);
-    
+
     return `
         <div class="card bg-base-100 shadow-lg plugin-card border hover:border-primary hover:shadow-xl transition-all duration-200 cursor-pointer">
             <div class="card-body"onclick="event.stopPropagation(); showPluginDetails('${escapeHtml(plugin.id)}')">
@@ -218,13 +218,13 @@ async function createPluginCard(plugin) {
                 ${keywords.length > 0 ? `
                     <div class="mb-4">
                         <div class="flex flex-wrap gap-1">
-                            ${keywords.slice(0, 3).map(keyword => 
-                                `<span class="badge badge-secondary badge-sm">${escapeHtml(keyword)}</span>`
-                            ).join('')}
-                            ${keywords.length > 3 ? 
-                                `<span class="badge badge-ghost badge-sm">+${keywords.length - 3}</span>` 
-                                : ''
-                            }
+                            ${keywords.slice(0, 3).map(keyword =>
+        `<span class="badge badge-secondary badge-sm">${escapeHtml(keyword)}</span>`
+    ).join('')}
+                            ${keywords.length > 3 ?
+                `<span class="badge badge-ghost badge-sm">+${keywords.length - 3}</span>`
+                : ''
+            }
                         </div>
                     </div>
                 ` : ''}
@@ -255,7 +255,7 @@ async function getRepositoryUrl(pluginId) {
         'https://raw.githubusercontent.com/MaiM-with-u/plugin-repo/main/plugins.json',
         'https://cdn.jsdelivr.net/gh/MaiM-with-u/plugin-repo@main/plugins.json'
     ];
-    
+
     for (const url of urls) {
         try {
             const response = await fetch(url);
@@ -269,7 +269,7 @@ async function getRepositoryUrl(pluginId) {
             continue;
         }
     }
-    
+
     console.warn('无法获取原始插件数据，所有数据源都失败');
     return null;
 }
@@ -280,10 +280,10 @@ function showPluginDetails(pluginId) {
     if (!plugin) {
         return;
     }
-    
+
     // 先关闭已存在的模态框
     closeModal();
-    
+
     const { manifest } = plugin;
     const modalContent = `
         <div class="modal modal-open" id="plugin-detail-modal">
@@ -343,9 +343,9 @@ function showPluginDetails(pluginId) {
                     <div class="mb-4">
                         <h4 class="font-semibold mb-2">标签</h4>
                         <div class="flex flex-wrap gap-2">
-                            ${manifest.keywords.map(keyword => 
-                                `<span class="badge badge-secondary">${escapeHtml(keyword)}</span>`
-                            ).join('')}
+                            ${manifest.keywords.map(keyword =>
+        `<span class="badge badge-secondary">${escapeHtml(keyword)}</span>`
+    ).join('')}
                         </div>
                     </div>
                 ` : ''}
@@ -359,9 +359,9 @@ function showPluginDetails(pluginId) {
             <div class="modal-backdrop" onclick="closeModal()"></div>
         </div>
     `;
-    
+
     document.body.insertAdjacentHTML('beforeend', modalContent);
-    
+
     // 添加键盘支持（ESC键关闭）
     document.addEventListener('keydown', handleModalKeydown);
 }

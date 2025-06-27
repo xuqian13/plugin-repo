@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaiBot 插件仓库</title>    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>MaiBot 插件仓库</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
-    <link rel="stylesheet" href="css/style.css">    
-    <link rel="icon" href="img/maimai.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/maimai.ico" />
     <style>
         .plugin-card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
+
         .plugin-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
+
         .plugin-card .card-body:hover {
             background: rgba(var(--p), 0.05);
         }
+
         .tag {
             display: inline-block;
             padding: 0.25rem 0.5rem;
@@ -26,56 +31,62 @@
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 500;
-        }        .line-clamp-3 {
+        }
+
+        .line-clamp-3 {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-        
+
         /* 模态框动画 */
         .modal {
             animation: modalFadeIn 0.2s ease-out;
         }
-        
+
         @keyframes modalFadeIn {
             from {
                 opacity: 0;
                 transform: scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
-          /* 卡片加载动画 */
+
+        /* 卡片加载动画 */
         .plugin-card {
             animation: cardSlideIn 0.3s ease-out;
         }
-        
+
         @keyframes cardSlideIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         /* 禁用 stats 组件的默认悬停效果 */
         .stats {
             pointer-events: none;
         }
-        
+
         .stats .stat {
             pointer-events: none;
             cursor: default;
         }
     </style>
 </head>
+
 <body class="bg-base-100">
     <!-- 导航栏 -->
     <div class="navbar bg-primary text-primary-content shadow-lg">
@@ -83,10 +94,12 @@
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7"></path>
                     </svg>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
                     <li><a href="#home">首页</a></li>
                     <li><a href="#plugins">插件列表</a></li>
                     <li><a href="https://github.com/MaiM-with-u/plugin-repo" target="_blank">GitHub 仓库</a></li>
@@ -104,7 +117,8 @@
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                     <i class="fas fa-palette"></i>
                 </div>
-                <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
+                <ul tabindex="0"
+                    class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-base-content">
                     <li><a onclick="setTheme('light')"><i class="fas fa-sun mr-2"></i>浅色模式</a></li>
                     <li><a onclick="setTheme('dark')"><i class="fas fa-moon mr-2"></i>深色模式</a></li>
                     <li><a onclick="setTheme('cupcake')"><i class="fas fa-palette mr-2"></i>彩色模式</a></li>
@@ -134,7 +148,7 @@
                     </div>
                 </div>
             </div>
-        </div>        <!-- 搜索和筛选 -->
+        </div> <!-- 搜索和筛选 -->
         <div class="mb-8">
             <div class="flex flex-col sm:flex-row gap-4 items-stretch">
                 <div class="form-control flex-1">
@@ -197,6 +211,8 @@
                 </a>
             </div>
         </div>
-    </footer>    <script src="js/app.js"></script>
+    </footer>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
