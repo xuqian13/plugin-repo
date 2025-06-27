@@ -184,7 +184,7 @@ async function createPluginCard(plugin) {
     
     return `
         <div class="card bg-base-100 shadow-lg plugin-card border hover:border-primary hover:shadow-xl transition-all duration-200 cursor-pointer">
-            <div class="card-body">
+            <div class="card-body"onclick="event.stopPropagation(); showPluginDetails('${escapeHtml(plugin.id)}')>
                 <div class="flex justify-between items-start mb-2">
                     <h3 class="card-title text-lg">
                         <i class="fas fa-puzzle-piece text-primary mr-2"></i>
