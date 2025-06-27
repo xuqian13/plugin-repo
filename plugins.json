@@ -42,5 +42,9 @@
   {
     "id": "xuqian13.music_plugin",
     "repositoryUrl": "https://github.com/xuqian13/music_plugin"
+  },
+  {
+    "id": "Schxar.Maibot-Doubao_pic_plugin",
+    "repositoryUrl": "https://github.com/schxar/doubao_pic_plugin"
   }
 ]
