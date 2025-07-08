@@ -4,6 +4,10 @@
     "repositoryUrl": "https://github.com/MaiM-with-u/MaiBot"
   },
   {
+    "id":"SengokuCola.Mute-Plugin",
+    "repositoryUrl": "https://github.com/SengokuCola/MutePlugin"
+  },
+  {
     "id": "A0000Xz.MaiBot-Tarots-Plugin",
     "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Tarots-Plugin"
   },
@@ -63,8 +67,12 @@
     "id": "XXXxx7258.url_summary_plugin",
     "repositoryUrl": "https://github.com/XXXxx7258/url_summary_plugin"
   },
-   {
-     "id": "khiqwq.silent_mode_plugin",
-     "repositoryUrl": "https://github.com/khiqwq/MaiBot_silent_Plugins"
-   }
+  {
+    "id": "khiqwq.silent_mode_plugin",
+    "repositoryUrl": "https://github.com/khiqwq/MaiBot_silent_Plugins"
+  },
+  {
+    "id": "1021143806.custom_pic_plugin",
+    "repositoryUrl": "https://github.com/1021143806/custom_pic_plugin"
+  }
 ]
