@@ -761,8 +761,8 @@
         "url": "https://github.com/khiqwq"
       },
       "license": "AGPL-v3.0",
-      "homepage_url": "https://github.com/khiqwq/silent_mode_plugin",
-      "repository_url": "https://github.com/khiqwq/silent_mode_plugin",
+      "homepage_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
+      "repository_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
       "host_application": {
         "min_version": "0.8.0",
         "max_version": "0.8.0"
