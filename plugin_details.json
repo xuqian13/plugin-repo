@@ -104,15 +104,15 @@
       "description": "基于火山引擎豆包模型的AI搜索插件，支持智能LLM判定和高效搜索功能。",
       "author": {
         "name": "Schxar",
-        "url": "https://github.com/MaiM-with-u"
+        "url": "https://github.com/schxar/doubao_search_plugin"
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.8.0",
         "max_version": "0.8.0"
       },
-      "homepage_url": "https://github.com/MaiM-with-u/maibot",
-      "repository_url": "https://github.com/MaiM-with-u/maibot",
+      "homepage_url": "https://github.com/schxar/doubao_search_plugin",
+      "repository_url": "https://github.com/schxar/doubao_search_plugin",
       "keywords": [
         "ai",
         "search",
@@ -761,8 +761,8 @@
         "url": "https://github.com/khiqwq"
       },
       "license": "AGPL-v3.0",
-      "homepage_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
-      "repository_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
+      "homepage_url": "https://github.com/khiqwq/silent_mode_plugin",
+      "repository_url": "https://github.com/khiqwq/silent_mode_plugin",
       "host_application": {
         "min_version": "0.8.0",
         "max_version": "0.8.0"
