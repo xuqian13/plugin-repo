@@ -82,5 +82,13 @@
   {
     "id": "internetsb.Maizone",
     "repositoryUrl": "https://github.com/internetsb/Maizone"
+  },
+  {
+    "id": "liuchunyu44.acpoke_plugin",
+    "repositoryUrl": "https://github.com/liuchunyu44/acpoke_plugin"
+  },
+  {
+    "id": "SkillfulPainter.repeat_plugin",
+    "repositoryUrl": "https://github.com/SkillfulPainter/repeat_plugin"
   }
 ]
