@@ -855,5 +855,47 @@
         ]
       }
     }
+  },
+  {
+    "id": "dkdcakedangao.MaiBot-MHWJH-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "喵内的怪物猎人集会码插件",
+      "version": "1.0.0",
+      "description": "提供怪物猎人集会码的登记、查询和删除功能，支持多群组隔离管理",
+      "author": {
+        "name": "倒过来的蛋糕蛋糕",
+        "url": "https://space.bilibili.com/85109738"
+      },
+      "license": "GPL-v3.0-or-later",
+      "keywords": [
+        "怪物猎人",
+        "集会码",
+        "游戏",
+        "MHW",
+        "集会"
+      ],
+      "categories": [
+        "游戏",
+        "实用工具"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.1"
+      },
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "MHWJHAction",
+            "description": "处理怪物猎人集会码的登记、查询和删除操作"
+          }
+        ]
+      }
+    }
   }
 ]
