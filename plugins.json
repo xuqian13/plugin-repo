@@ -86,5 +86,9 @@
   {
     "id": "SkillfulPainter.repeat_plugin",
     "repositoryUrl": "https://github.com/SkillfulPainter/repeat_plugin"
+  },
+  {
+    "id": "internetsb.Maizone",
+    "repositoryUrl": "https://github.com/internetsb/Maizone"
   }
 ]
