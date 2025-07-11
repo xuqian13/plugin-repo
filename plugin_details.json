@@ -104,15 +104,15 @@
       "description": "基于火山引擎豆包模型的AI搜索插件，支持智能LLM判定和高效搜索功能。",
       "author": {
         "name": "Schxar",
-        "url": "https://github.com/MaiM-with-u"
+        "url": "https://github.com/schxar/doubao_search_plugin"
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.8.0",
         "max_version": "0.8.0"
       },
-      "homepage_url": "https://github.com/MaiM-with-u/maibot",
-      "repository_url": "https://github.com/MaiM-with-u/maibot",
+      "homepage_url": "https://github.com/schxar/doubao_search_plugin",
+      "repository_url": "https://github.com/schxar/doubao_search_plugin",
       "keywords": [
         "ai",
         "search",
@@ -367,7 +367,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "防戳插件",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "description": "帮助你的麦麦实现人性化戳一戳互动的同时，避免过多戳一戳捣乱",
       "author": {
         "name": "A肆零西烛",
@@ -376,7 +376,7 @@
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.8.0",
-        "max_version": "0.8.1"
+        "max_version": "0.8.2"
       },
       "keywords": [
         "poke",
@@ -761,8 +761,8 @@
         "url": "https://github.com/khiqwq"
       },
       "license": "AGPL-v3.0",
-      "homepage_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
-      "repository_url": "https://github.com/khiqwq/MaiBot_silent_Plugins",
+      "homepage_url": "https://github.com/khiqwq/silent_mode_plugin",
+      "repository_url": "https://github.com/khiqwq/silent_mode_plugin",
       "host_application": {
         "min_version": "0.8.0",
         "max_version": "0.8.0"
@@ -852,6 +852,48 @@
           "高自由度模型",
           "api自选",
           "需要一定ai绘图能力"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dkdcakedangao.MaiBot-MHWJH-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "喵内的怪物猎人集会码插件",
+      "version": "1.0.0",
+      "description": "提供怪物猎人集会码的登记、查询和删除功能，支持多群组隔离管理",
+      "author": {
+        "name": "倒过来的蛋糕蛋糕",
+        "url": "https://space.bilibili.com/85109738"
+      },
+      "license": "GPL-v3.0-or-later",
+      "keywords": [
+        "怪物猎人",
+        "集会码",
+        "游戏",
+        "MHW",
+        "集会"
+      ],
+      "categories": [
+        "游戏",
+        "实用工具"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "host_application": {
+        "min_version": "0.8.0",
+        "max_version": "0.8.1"
+      },
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "action",
+            "name": "MHWJHAction",
+            "description": "处理怪物猎人集会码的登记、查询和删除操作"
+          }
         ]
       }
     }
