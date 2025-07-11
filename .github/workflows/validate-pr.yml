@@ -37,25 +37,62 @@ jobs:
               const mainPlugins = JSON.parse(fs.readFileSync('main/plugins.json', 'utf8'));
               const prPlugins = JSON.parse(fs.readFileSync('pr/plugins.json', 'utf8'));
 
+              // Create sets for both repository URLs and plugin IDs for comprehensive comparison
               const mainRepoUrls = new Set(mainPlugins.map(p => p.repositoryUrl));
-              const newPlugins = prPlugins.filter(p => !mainRepoUrls.has(p.repositoryUrl));
+              const mainPluginIds = new Set(mainPlugins.map(p => p.id));
+              
+              // Find plugins that are completely new (not in main branch)
+              const newPlugins = prPlugins.filter(p => 
+                !mainRepoUrls.has(p.repositoryUrl) && !mainPluginIds.has(p.id)
+              );
 
-              if (newPlugins.length === 0) {
-                console.log('No new plugins detected in plugins.json.');
+              // Find modified plugins (same ID or URL but different content)
+              const modifiedPlugins = prPlugins.filter(p => {
+                const mainPlugin = mainPlugins.find(mp => 
+                  mp.repositoryUrl === p.repositoryUrl || mp.id === p.id
+                );
+                return mainPlugin && JSON.stringify(mainPlugin) !== JSON.stringify(p);
+              });
+
+              if (newPlugins.length === 0 && modifiedPlugins.length === 0) {
+                console.log('No new or modified plugins detected in plugins.json.');
                 process.exit(0);
               }
 
-              if (newPlugins.length > 1) {
-                throw new Error('Error: Only one plugin can be submitted per Pull Request.');
+              // Check for conflicts: duplicate IDs or URLs within the PR
+              const prRepoUrls = prPlugins.map(p => p.repositoryUrl);
+              const prPluginIds = prPlugins.map(p => p.id);
+              const duplicateUrls = prRepoUrls.filter((url, index) => prRepoUrls.indexOf(url) !== index);
+              const duplicateIds = prPluginIds.filter((id, index) => prPluginIds.indexOf(id) !== index);
+
+              if (duplicateUrls.length > 0) {
+                throw new Error(`Duplicate repository URLs found in PR: ${duplicateUrls.join(', ')}`);
+              }
+              if (duplicateIds.length > 0) {
+                throw new Error(`Duplicate plugin IDs found in PR: ${duplicateIds.join(', ')}`);
               }
 
-              const plugin = newPlugins[0];
-              console.log(`Validating new plugin: ${plugin.id} from ${plugin.repositoryUrl}`);
+              // Validate that only one new plugin is submitted per PR
+              if (newPlugins.length > 1) {
+                throw new Error('Error: Only one new plugin can be submitted per Pull Request.');
+              }
 
-              const manifest = await fetchManifest(plugin.repositoryUrl);
-              validateManifest(manifest);
+              // Process new plugins
+              for (const plugin of newPlugins) {
+                console.log(`Validating new plugin: ${plugin.id} from ${plugin.repositoryUrl}`);
+                const manifest = await fetchManifest(plugin.repositoryUrl);
+                validateManifest(manifest, plugin);
+              }
 
-              console.log('✅ Validation successful!');
+              // Process modified plugins
+              for (const plugin of modifiedPlugins) {
+                console.log(`Validating modified plugin: ${plugin.id} from ${plugin.repositoryUrl}`);
+                const manifest = await fetchManifest(plugin.repositoryUrl);
+                validateManifest(manifest, plugin);
+              }
+
+              const totalChanges = newPlugins.length + modifiedPlugins.length;
+              console.log(`✅ Validation successful! Processed ${newPlugins.length} new and ${modifiedPlugins.length} modified plugins.`);
             } catch (error) {
               console.error(`❌ Validation failed: ${error.message}`);
               process.exit(1);
@@ -79,7 +116,7 @@ jobs:
             });
           }
 
-          function validateManifest(manifest) {
+          function validateManifest(manifest, plugin) {
             const requiredFields = ['manifest_version', 'name', 'version', 'description', 'author', 'license', 'host_application'];
             for (const field of requiredFields) {
               if (!manifest[field]) throw new Error(`_manifest.json is missing required field: '${field}'`);
@@ -90,7 +127,13 @@ jobs:
             if (typeof manifest.host_application !== 'object' || !manifest.host_application.min_version) {
                 throw new Error("_manifest.json 'host_application' field must be an object with a 'min_version' property.");
             }
-            console.log('Manifest structure is valid.');
+
+            // Validate that plugin ID in plugins.json matches manifest name/id
+            if (plugin && plugin.id !== manifest.name) {
+              console.warn(`Warning: Plugin ID '${plugin.id}' in plugins.json differs from manifest name '${manifest.name}'. Consider keeping them consistent.`);
+            }
+
+            console.log(`Manifest structure is valid for plugin: ${manifest.name} v${manifest.version}`);
           }
 
           main();
