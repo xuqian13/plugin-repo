@@ -951,37 +951,58 @@
     }
   },
   {
-    "id": "liuchunyu44.acpoke_plugin",
+    "id": "SkillfulPainter.repeat_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "poke_plugin",
-      "display_name": "戳一戳插件",
-      "version": "0.3.3",
-      "description": "一个主动发起“戳一戳”的 MaiMai 插件",
+      "name": "麦麦复读插件（在内置reply插件基础上更改）",
+      "version": "1.0.0",
+      "description": "在内置的reply插件中新增了判断是否有重复消息、是否参与复读的方法。覆盖前请先备份！！",
       "author": {
-        "name": "何夕",
-        "email": "lcy1416603026@gmail.com",
-        "link": "https://github.com/liuchunyu44/poke_plugin"
+        "name": "Original by MaiBot团队，modified by 火火火木",
+        "url": "https://github.com/SkillfulPainter"
       },
-      "license": "MIT",
+      "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.8.0",
-        "max_version": "0.8.10"
+        "min_version": "0.8.0"
       },
-      "entry": "plugin.py",
+      "homepage_url": "https://github.com/SkillfulPainter",
+      "repository_url": "https://github.com/SkillfulPainter/repeat_plugin",
       "keywords": [
-        "poke",
-        "maimai",
-        "插件",
-        "自动戳人"
+        "core",
+        "chat",
+        "reply",
+        "emoji",
+        "action",
+        "built-in",
+        "repeat"
       ],
       "categories": [
-        "Fun",
-        "Interaction",
-        "Automation"
+        "Core System",
+        "Chat Management"
       ],
       "default_locale": "zh-CN",
-      "locales_path": "_locales"
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": true,
+        "plugin_type": "action_provider",
+        "components": [
+          {
+            "type": "action",
+            "name": "reply",
+            "description": "参与聊天回复，发送文本进行表达（新增复读判断）"
+          },
+          {
+            "type": "action",
+            "name": "no_reply",
+            "description": "暂时不回复消息，等待新消息或超时"
+          },
+          {
+            "type": "action",
+            "name": "emoji",
+            "description": "发送表情包辅助表达情绪"
+          }
+        ]
+      }
     }
   }
 ]
