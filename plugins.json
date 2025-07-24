@@ -95,5 +95,9 @@
   {
     "id": "foxcyber907.balance_plugin",
     "repositoryUrl": "https://github.com/foxcyber907/maim_balance_plugin"
+  },
+  {
+    "id": "Neorestim.poke_plugin",
+    "repositoryUrl": "https://github.com/Neorestim/poke_plugin"
   }
 ]
