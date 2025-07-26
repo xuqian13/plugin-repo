@@ -4,7 +4,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "群聊禁言管理插件 (Mute Plugin)",
-      "version": "3.0.1",
+      "version": "3.1.0",
       "description": "群聊禁言管理插件，提供智能禁言功能",
       "author": {
         "name": "SengokuCola",
@@ -12,7 +12,7 @@
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.8.0"
+        "min_version": "0.9.0"
       },
       "keywords": [
         "mute",
@@ -36,7 +36,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "塔罗牌插件",
-      "version": "1.2.1",
+      "version": "1.3.0",
       "description": "提供了抽塔罗牌占卜功能，具有模拟人类的调用方式和独特自定义风格的解牌回复。牌面为B站幻星集",
       "author": {
         "name": "A肆零西烛",
@@ -44,8 +44,8 @@
       },
       "license": "AGPL-v3.0",
       "host_application": {
-        "min_version": "0.9.0",
-        "max_version": "0.9.0"
+        "min_version": "0.9.1",
+        "max_version": "0.9.1"
       },
       "keywords": [
         "tarot",
@@ -108,8 +108,8 @@
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.8.0",
-        "max_version": "0.8.0"
+        "min_version": "0.9.0",
+        "max_version": "0.9.0"
       },
       "homepage_url": "https://github.com/schxar/doubao_search_plugin",
       "repository_url": "https://github.com/schxar/doubao_search_plugin",
@@ -165,7 +165,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "硅基流动生图插件",
-      "version": "0.4",
+      "version": "0.5",
       "description": "发送图片的插件动作，支持通过硅基流动生成图片并发送，兼容base64图片返回方式。",
       "author": {
         "name": "yishang/一闪",
@@ -173,8 +173,8 @@
       },
       "license": "MIT",
       "host_application": {
-        "min_version": "0.8.0",
-        "max_version": "0.8.0"
+        "min_version": "0.9.0",
+        "max_version": "0.9.1"
       },
       "homepage_url": "https://github.com/minecraft1024a/send_image_plugin_sf",
       "repository_url": "https://github.com/minecraft1024a/send_image_plugin_sf",
@@ -333,7 +333,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "宵禁插件",
-      "version": "0.9.0",
+      "version": "1.3.0",
       "description": "在机器人是QQ群聊管理员的情况下实现了自动宵禁功能",
       "author": {
         "name": "A肆零西烛",
@@ -341,8 +341,8 @@
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.9.0",
-        "max_version": "0.9.0"
+        "min_version": "0.9.1",
+        "max_version": "0.9.1"
       },
       "keywords": [
         "mute",
@@ -367,7 +367,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "防戳插件",
-      "version": "1.2.2",
+      "version": "1.3.0",
       "description": "帮助你的麦麦实现人性化戳一戳互动的同时，避免过多戳一戳捣乱",
       "author": {
         "name": "A肆零西烛",
@@ -375,8 +375,8 @@
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.9.0",
-        "max_version": "0.9.0"
+        "min_version": "0.9.1",
+        "max_version": "0.9.1"
       },
       "keywords": [
         "poke",
@@ -440,42 +440,36 @@
     "id": "xuqian13.music_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "网易云点歌插件",
-      "version": "0.1.0",
-      "description": "基于网易云音乐API的智能点歌插件，支持音乐搜索和点歌功能",
+      "name": "网易云音乐点歌插件",
+      "version": "1.0.0",
+      "description": "基于网易云音乐API的智能点歌插件，支持音乐搜索和点歌功能。",
       "author": {
         "name": "靓仔",
         "url": "https://github.com/xuqian13"
       },
-      "license": "AGPL-3.0",
+      "license": "AGPL-v3.0",
       "host_application": {
-        "min_version": "0.8.0",
-        "max_version": "0.8.0"
+        "min_version": "0.9.0",
+        "max_version": "0.9.0"
       },
-      "homepage_url": "https://github.com/xuqian13",
-      "repository_url": "https://github.com/xuqian13/music_plugin",
       "keywords": [
-        "听歌",
+        "音乐",
         "点歌",
+        "网易云",
         "music",
-        "song"
+        "song",
+        "播放",
+        "搜索",
+        "娱乐"
       ],
       "categories": [
-        "music"
+        "Entertainment",
+        "Music",
+        "Utility"
       ],
+      "repository_url": "https://github.com/xuqian13/music_plugin",
       "default_locale": "zh-CN",
-      "locales_path": "_locales",
-      "plugin_info": {
-        "is_built_in": false,
-        "plugin_type": "general",
-        "components": [
-          {
-            "type": "action",
-            "name": "music_plugin",
-            "description": "基于网易云音乐API的智能点歌插件，支持音乐搜索和点歌功能。"
-          }
-        ]
-      }
+      "locales_path": "_locales"
     }
   },
   {
@@ -719,7 +713,7 @@
       "license": "MIT",
       "host_application": {
         "min_version": "0.8.0",
-        "max_version": "0.9.0"
+        "max_version": "0.9.1"
       },
       "homepage_url": "https://github.com/XXXxx7258/url_summary_plugin",
       "repository_url": "https://github.com/XXXxx7258/url_summary_plugin",
@@ -1069,14 +1063,14 @@
       "description": "适用于MaiBot 0.8.x or later 版本的戳一戳插件",
       "author": {
         "name": "Neorestim",
-        "url": "https://github.com/MaiM-with-u"
+        "url": "https://github.com/Neorestim"
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.8.0"
       },
-      "homepage_url": "https://github.com/MaiM-with-u/maibot",
-      "repository_url": "https://github.com/MaiM-with-u/maibot",
+      "homepage_url": "https://github.com/Neorestim/poke_plugin/",
+      "repository_url": "https://github.com/Neorestim/poke_plugin/",
       "keywords": [
         "poke"
       ],
