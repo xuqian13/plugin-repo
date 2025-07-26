@@ -99,5 +99,9 @@
   {
     "id": "Neorestim.poke_plugin",
     "repositoryUrl": "https://github.com/Neorestim/poke_plugin"
+  },
+  {
+    "id": "xuqian13.ai_voice_plugin",
+    "repositoryUrl": "https://github.com/xuqian13/ai_voice_plugin"
   }
 ]
