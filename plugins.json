@@ -113,6 +113,11 @@
     "repositoryUrl": "https://github.com/XinxInxiN0/search_plugin"
   },
   {
+
+    "id": "Mettafy.timed_greeting_plugin",
+    "repositoryUrl": "https://github.com/Mettafy/timed_greeting_plugin"
+  },
+  {
     "id": "SteamedbunsMC.SomeUtils",
     "repositoryUrl": "https://github.com/SteamedbunsMC/SomeUtils"
   }
