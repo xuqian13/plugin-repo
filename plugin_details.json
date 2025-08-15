@@ -4,7 +4,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "群聊禁言管理插件 (Mute Plugin)",
-      "version": "3.1.0",
+      "version": "4.0.0",
       "description": "群聊禁言管理插件，提供智能禁言功能",
       "author": {
         "name": "SengokuCola",
@@ -12,7 +12,7 @@
       },
       "license": "GPL-v3.0-or-later",
       "host_application": {
-        "min_version": "0.9.0"
+        "min_version": "0.10.0"
       },
       "keywords": [
         "mute",
@@ -26,6 +26,94 @@
         "Moderation",
         "Group Management",
         "Admin Tools"
+      ],
+      "repository_url": "https://github.com/A0000Xz/MaiBot-Tarots-Plugin",
+      "default_locale": "zh-CN",
+      "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "SengokuCola.BetterExpression-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "更好的表达方式插件",
+      "version": "1.0.0",
+      "description": "可以查询，学习，修改表达方式",
+      "author": {
+        "name": "SengokuCola",
+        "url": "https://github.com/SengokuCola"
+      },
+      "license": "MIT License",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "keywords": [
+        "expression",
+        "learn",
+        "modify"
+      ],
+      "categories": [
+        "Entertainment",
+        "Fun"
+      ],
+      "repository_url": "https://github.com/SengokuCola/BetterExpressionPlugin",
+      "default_locale": "zh-CN",
+      "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "SengokuCola.FrequencyControl-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "频率控制插件",
+      "version": "1.0.0",
+      "description": "可以设置群聊的发言频率",
+      "author": {
+        "name": "SengokuCola",
+        "url": "https://github.com/SengokuCola"
+      },
+      "license": "MIT License",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "keywords": [
+        "frequency",
+        "control",
+        "limit",
+        "rate",
+        "limit"
+      ],
+      "categories": [
+        "Moderation",
+        "Fun"
+      ],
+      "repository_url": "https://github.com/SengokuCola/BetterFrequency",
+      "default_locale": "zh-CN",
+      "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "SengokuCola.DongBird-Plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "懂鸟-鸟类识别插件",
+      "version": "1.0.0",
+      "description": "麦麦可以精确地识别鸟类图片",
+      "author": {
+        "name": "SengokuCola",
+        "url": "https://github.com/SengokuCola"
+      },
+      "license": "MIT License",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "keywords": [
+        "bird",
+        "image"
+      ],
+      "categories": [
+        "Entertainment",
+        "Fun"
       ],
       "default_locale": "zh-CN",
       "locales_path": "_locales"
@@ -1395,6 +1483,48 @@
       "repository_url": "https://github.com/A0000Xz/MaiBot-Silence-Plugin",
       "default_locale": "zh-CN",
       "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "XinxInxiN0.bilibili_video_sender_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "B站视频直链发送插件 (Bilibili Video Sender)",
+      "version": "1.0.0",
+      "description": "当收到包含哔哩哔哩视频链接的消息时，自动解析并发送可直连的播放地址与视频文件",
+      "author": {
+        "name": "U+4E50",
+        "url": "https://github.com/XinxInxiN0"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.9.0"
+      },
+      "homepage_url": "https://github.com/XinxInxiN0",
+      "repository_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
+      "config_file_name": "config.toml",
+      "keywords": [
+        "bilibili",
+        "video",
+        "sender",
+        "auto"
+      ],
+      "categories": [
+        "Utilities",
+        "Video"
+      ],
+      "default_locale": "zh-CN",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "utility",
+        "components": [],
+        "features": [
+          "自动识别B站链接",
+          "解析直链并发送",
+          "同时尝试发送视频文件",
+          "支持b23.tv短链"
+        ]
+      }
     }
   }
 ]
