@@ -155,8 +155,11 @@
   {
     "id": "yhny1001.proactive_talk_plugin",
     "repositoryUrl": "https://github.com/yhny1001/proactive_talk_plugin"
+  },
+  {
+    "id": "CharTyr.Maibot_hltv_plugin",
+    "repositoryUrl": "https://github.com/CharTyr/Maibot_hltv_plugin"
   }
 ]
-
 
 
