@@ -159,6 +159,10 @@
   {
     "id": "CharTyr.Maibot_hltv_plugin",
     "repositoryUrl": "https://github.com/CharTyr/Maibot_hltv_plugin"
+  },
+  {
+    "id": "Windpicker-owo.maibot-screen-monitor-plugin",
+    "repositoryUrl": "https://github.com/Windpicker-owo/maibot-screen-monitor-plugin"
   }
 ]
 
