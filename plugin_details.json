@@ -1099,7 +1099,7 @@
       "description": "一个主动发起“戳一戳”的 MaiMai 插件，帮助你轻松与好友互动，自动发起戳一戳，增添群聊乐趣。",
       "author": {
         "name": "何夕",
-        "url": "https://github.com/liuchunyu44/acpoke_plugin",
+        "url": "https://github.com/Heximiao/acpoke_plugin",
         "email": "lcy1416603026@gmail.com"
       },
       "license": "MIT",
@@ -1108,8 +1108,8 @@
         "max_version": "0.10.1"
       },
       "entry": "plugin.py",
-      "homepage_url": "https://github.com/liuchunyu44/acpoke_plugin",
-      "repository_url": "https://github.com/liuchunyu44/acpoke_plugin",
+      "homepage_url": "https://github.com/Heximiao/acpoke_plugin",
+      "repository_url": "https://github.com/Heximiao/acpoke_plugin",
       "keywords": [
         "poke",
         "maimai",
@@ -1511,7 +1511,7 @@
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.10.0",
-        "max_version": "0.10.0"
+        "max_version": "0.10.1"
       },
       "homepage_url": "https://github.com/Windpicker-owo/InternetSearchPlugin",
       "repository_url": "https://github.com/Windpicker-owo/InternetSearchPlugin",
@@ -1580,14 +1580,14 @@
       "description": "定时检测B站UP主动态并推送到指定QQ群（跳过置顶、支持多UID/多群、启动日志提示）。",
       "author": {
         "name": "白狐",
-        "url": "https://github.com/whitefox20011120/bilibili_dynamic_push_plugin"
+        "url": "https://github.com/whitefox20011120"
       },
       "license": "AGPL-3.0",
       "host_application": {
-        "min_version": "0.10.0",
+        "min_version": "0.9.0",
         "max_version": "0.10.1"
       },
-      "homepage_url": "https://github.com/whitefox20011120",
+      "homepage_url": "https://github.com/whitefox20011120/bilibili_dynamic_push_plugin",
       "repository_url": "",
       "config_file_name": "config.toml",
       "keywords": [
@@ -1826,6 +1826,42 @@
           "实时比赛监控和数据推送",
           "比赛结果和历史记录查询",
           "数据缓存和API限流保护"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Unreal.My_Fucked_turtle_soup",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "海龟汤",
+      "version": "1.5.0",
+      "description": "支持游戏模式的海龟汤题目生成和互动。",
+      "author": {
+        "name": "Unreal",
+        "url": "https://github.com/svila-ylym"
+      },
+      "license": "MIT",
+      "keywords": [
+        "海龟汤",
+        "推理游戏",
+        "AI",
+        "娱乐"
+      ],
+      "categories": [
+        "娱乐"
+      ],
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "plugin_info": {
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "command",
+            "name": "HaiTurtleSoupCommand",
+            "description": "处理 /hgt 命令，生成海龟汤题目或进行游戏互动。用法: /hgt [问题|提示|整理线索|猜谜|退出|帮助|汤面|揭秘]"
+          }
         ]
       }
     }
