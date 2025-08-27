@@ -171,6 +171,10 @@
   {
     "id": "khIqwq.owner_auth_plugin",
     "repositoryUrl": "https://github.com/khiqwq/owner_auth_plugin"
+  },
+  {
+    "id": "Heximiao.turtlesoup_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/turtlesoup_plugin"
   }
 ]
 
