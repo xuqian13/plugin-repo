@@ -159,6 +159,10 @@
   {
     "id": "CharTyr.Maibot_hltv_plugin",
     "repositoryUrl": "https://github.com/CharTyr/Maibot_hltv_plugin"
+  },
+  {
+    "id": "Unreal.My_Fucked_turtle_soup",
+    "repositoryUrl": "https://github.com/svila-ylym/My_Fucked_turtle_soup-Maimbot"
   }
 ]
 
