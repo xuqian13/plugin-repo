@@ -167,8 +167,13 @@
   {
     "id": "Windpicker-owo.maibot-screen-monitor-plugin",
     "repositoryUrl": "https://github.com/Windpicker-owo/maibot-screen-monitor-plugin"
+  },
+  {
+    "id": "khIqwq.owner_auth_plugin",
+    "repositoryUrl": "https://github.com/khiqwq/owner_auth_plugin"
   }
 ]
+
 
 
 
