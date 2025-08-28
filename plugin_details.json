@@ -2025,5 +2025,42 @@
         ]
       }
     }
+  },
+  {
+    "id": "Unreal.My_Fucked_100_People",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "MY_FUCKED_100_PEOPLE",
+      "version": "1.3.3",
+      "description": "群U群U，让我c一下，就一下，好不好嘛~",
+      "author": {
+        "name": "Unreal",
+        "url": "https://github.com/svila-ylym"
+      },
+      "license": "MIT",
+      "keywords": [
+        "qq",
+        "娱乐",
+        "哈基米",
+        "command"
+      ],
+      "categories": [
+        "Entertainment & Interaction"
+      ],
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "general",
+        "components": [
+          {
+            "type": "command",
+            "name": "CcbLoadQQCommand",
+            "description": "懂的都懂"
+          }
+        ]
+      }
+    }
   }
 ]
