@@ -187,6 +187,10 @@
   {
     "id": "Unreal.World_War_Simulator",
     "repositoryUrl": "https://github.com/svila-ylym/World_War_Simulator"
+  },
+  {
+    "id": "CharTyr.MaiBot-DetailedExplanation-Plugin",
+    "repositoryUrl": "https://github.com/CharTyr/MaiBot-DetailedExplanation-Plugin"
   }
 ]
 
