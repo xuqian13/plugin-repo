@@ -8,6 +8,14 @@
     "repositoryUrl": "https://github.com/SengokuCola/MutePlugin"
   },
   {
+    "id":"SengokuCola.BetterExpressionPlugin",
+    "repositoryUrl": "https://github.com/SengokuCola/BetterExpressionPlugin"
+  },
+  {
+    "id":"SengokuCola.BetterFrequency",
+    "repositoryUrl": "https://github.com/SengokuCola/BetterFrequency"
+  },
+  {
     "id": "A0000Xz.MaiBot-Tarots-Plugin",
     "repositoryUrl": "https://github.com/A0000Xz/MaiBot-Tarots-Plugin"
   },
@@ -84,8 +92,8 @@
     "repositoryUrl": "https://github.com/internetsb/Maizone"
   },
   {
-    "id": "liuchunyu44.acpoke_plugin",
-    "repositoryUrl": "https://github.com/liuchunyu44/acpoke_plugin"
+    "id": "Heximiao.acpoke_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/acpoke_plugin"
   },
   {
     "id": "SkillfulPainter.repeat_plugin",
@@ -132,7 +140,7 @@
   {
 
     "id": "whitefox20011120.bilibili_dynamic_push_plugin",
-    "repositoryUrl": "https://github.com/whitefox20011120/bilibili_dynamic_push_pluginO"
+    "repositoryUrl": "https://github.com/whitefox20011120/bilibili_dynamic_push_plugin"
   },
   {
     "id": "XinxInxiN0.bilibili_video_sender_plugin",
@@ -149,10 +157,44 @@
     "repositoryUrl": "https://github.com/yhny1001/proactive_talk_plugin"
   },
   {
+    "id": "CharTyr.Maibot_hltv_plugin",
+    "repositoryUrl": "https://github.com/CharTyr/Maibot_hltv_plugin"
+  },
+  {
+    "id": "Unreal.My_Fucked_turtle_soup",
+    "repositoryUrl": "https://github.com/svila-ylym/My_Fucked_turtle_soup-Maimbot"
+  },
+  {
+    "id": "Windpicker-owo.maibot-screen-monitor-plugin",
+    "repositoryUrl": "https://github.com/Windpicker-owo/maibot-screen-monitor-plugin"
+  },
+  {
+    "id": "khIqwq.owner_auth_plugin",
+    "repositoryUrl": "https://github.com/khiqwq/owner_auth_plugin"
+  },
+  {
+    "id": "Heximiao.turtlesoup_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/turtlesoup_plugin"
+  },
+  {
+    "id": "Unreal.My_Fucked_100_People",
+    "repositoryUrl": "https://github.com/svila-ylym/My_Fucked_100_People-Maimbot"
+  },
+  {
+    "id": "Ghost-chu.maiplug_message_react",
+    "repositoryUrl": "https://github.com/Ghost-chu/maiplug_message_react"
+  },
+  {
+    "id": "Unreal.World_War_Simulator",
+    "repositoryUrl": "https://github.com/svila-ylym/World_War_Simulator"
+  },
+  {
     "id": "CharTyr.MaiBot-DetailedExplanation-Plugin",
     "repositoryUrl": "https://github.com/CharTyr/MaiBot-DetailedExplanation-Plugin"
   }
 ]
+
+
 
 
 
