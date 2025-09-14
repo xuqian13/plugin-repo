@@ -191,8 +191,13 @@
   {
     "id": "Heximiao.repeat_plugin",
     "repositoryUrl": "https://github.com/Heximiao/repeat_plugin"
+  },
+    {
+    "id": "ZmasCloud.makeplugin_0.6",
+    "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
   }
 ]
+
 
 
 
