@@ -356,7 +356,7 @@
     }
   },
   {
-    "id": "ZmasCloud.makeplugin",
+    "id": "ZmasCloud.makeplugin-0.6",
     "manifest": {
       "manifest_version": 1,
       "name": "麦麦插件生成器",
