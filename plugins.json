@@ -32,7 +32,7 @@
     "repositoryUrl": "https://github.com/minecraft1024a/MaiBot-Send-Image-Plugin-SF"
   },
   {
-    "id": "ZmasCloud.makeplugin",
+    "id": "ZmasCloud.makeplugin-0.6",
     "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
   },
   {
@@ -192,11 +192,8 @@
     "id": "Heximiao.repeat_plugin",
     "repositoryUrl": "https://github.com/Heximiao/repeat_plugin"
   },
-    {
-    "id": "ZmasCloud.makeplugin_0.6",
-    "repositoryUrl": "https://github.com/ZmasCloud/makeplugin"
-  }
 ]
+
 
 
 
