@@ -198,6 +198,10 @@
   {
     "id": "Heximiao.vote_plugin",
     "repositoryUrl": "https://github.com/Heximiao/vote_plugin"
+  },
+  {
+    "id": "CharTyr.Maibot_topic_finder_plugin",
+    "repositoryUrl": "https://github.com/CharTyr/Maibot_topic_finder_plugin"
   }
 ]
 
