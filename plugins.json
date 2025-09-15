@@ -194,6 +194,10 @@
   {
     "id": "bockegai.diary_plugin",
     "repositoryUrl": "https://github.com/bockegai/diary_plugin"
+  },
+  {
+    "id": "Heximiao.vote_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/vote_plugin"
   }
 ]
 
