@@ -1030,7 +1030,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "Maizone（麦麦空间）",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "description": "让你的麦麦发QQ空间，评论，点赞",
       "author": {
         "name": "internetsb",
@@ -2271,7 +2271,7 @@
       },
       "license": "MIT",
       "host_application": {
-        "min_version": "0.9.0",
+        "min_version": "0.10.1",
         "max_version": "0.10.2"
       },
       "entry": "plugin.py",
