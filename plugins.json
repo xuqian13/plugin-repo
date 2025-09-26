@@ -202,6 +202,10 @@
   {
     "id": "CharTyr.Maibot_topic_finder_plugin",
     "repositoryUrl": "https://github.com/CharTyr/Maibot_topic_finder_plugin"
+  },
+  {
+    "id": "whitefox20011120.recall_manager_plugin",
+    "repositoryUrl": "https://github.com/whitefox20011120/recall_manager_plugin"
   }
 ]
 
