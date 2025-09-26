@@ -202,6 +202,9 @@
   {
     "id": "CharTyr.Maibot_topic_finder_plugin",
     "repositoryUrl": "https://github.com/CharTyr/Maibot_topic_finder_plugin"
+  },
+  {
+    "id": "namchengwuqiu.gemini_drawer",
+    "repositoryUrl": "https://github.com/namchengwuqiu/gemini_drawer"
   }
 ]
-
