@@ -210,5 +210,9 @@
   {
     "id": "namchengwuqiu.gemini_drawer",
     "repositoryUrl": "https://github.com/namchengwuqiu/gemini_drawer"
+  },
+  {
+    "id": "custom_commands_plugin",
+    "repositoryUrl": "https://github.com/TAIY2020/custom_commands_plugin"
   }
 ]
