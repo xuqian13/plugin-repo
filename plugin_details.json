@@ -2755,7 +2755,7 @@
     }
   },
   {
-    "id": "metaso_search_plugin",
+    "id": "SkillfulPainter.metaso_search_plugin",
     "manifest": {
       "manifest_version": 1,
       "name": "Metaso 搜索插件 (Metaso Search Plugin)",
