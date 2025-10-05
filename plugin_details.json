@@ -2753,5 +2753,51 @@
         "is_built_in": false
       }
     }
+  },
+  {
+    "id": "metaso_search_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "Metaso 搜索插件 (Metaso Search Plugin)",
+      "version": "1.0.0",
+      "description": "提供基于 Metaso 的网页和学术搜索功能。",
+      "author": {
+        "name": "fengin & Donald Armstrong"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.8.0"
+      },
+      "keywords": [
+        "search",
+        "metaso",
+        "web",
+        "scholar",
+        "tool"
+      ],
+      "categories": [
+        "Tools",
+        "Search"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "tool",
+        "components": [
+          {
+            "type": "tool",
+            "name": "search_metaso",
+            "description": "从公开互联网上搜索即时性信息和通用知识。"
+          }
+        ],
+        "features": [
+          "网页搜索",
+          "学术搜索 (可配置)",
+          "AI总结",
+          "速率限制"
+        ]
+      }
+    }
   }
 ]
