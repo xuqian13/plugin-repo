@@ -1657,9 +1657,9 @@
     "id": "XXXxx7258.google_search_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "Google 搜索以及缩写翻译插件 (Google Search and Abbreviation Translation Plugin)",
+      "name": "网页搜索以及缩写翻译以及图片搜索插件 (Web Search and Abbreviation Translation Plugin and...)",
       "version": "1.0.0",
-      "description": "支持多个搜索引擎的网络搜索以及聚合翻译搜索插件，具有自动降级功能。",
+      "description": "支持多个搜索引擎的网络搜索以及聚合翻译搜索以及图片搜索插件，具有自动降级功能。",
       "author": {
         "name": "晴空",
         "url": "https://github.com/XXXxx7258"
@@ -1675,6 +1675,7 @@
         "search",
         "web",
         "internet",
+        "图片",
         "查询",
         "搜索",
         "多引擎",
@@ -1685,7 +1686,8 @@
       "categories": [
         "Search",
         "Utilities",
-        "Translation"
+        "Translation",
+        "image"
       ],
       "default_locale": "zh-CN",
       "locales_path": "_locales",
@@ -2643,7 +2645,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "光遇查询插件",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "光遇工具(sky_tools_plugin)",
       "author": {
         "name": "寻",
@@ -2687,8 +2689,33 @@
           },
           {
             "type": "command",
-            "name": "大蜡",
+            "name": "candle",
             "description": "大蜡烛位置图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "ancestor",
+            "description": "复刻先祖信息获取命令"
+          },
+          {
+            "type": "command",
+            "name": "magic",
+            "description": "每日魔法图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "season_candle",
+            "description": "每日季蜡位置图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "calendar",
+            "description": "光遇日历图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "redstone",
+            "description": "红石位置图片获取命令"
           }
         ]
       }
