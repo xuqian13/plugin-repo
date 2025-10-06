@@ -2762,7 +2762,8 @@
       "version": "1.0.0",
       "description": "提供基于 Metaso 的网页和学术搜索功能。",
       "author": {
-        "name": "fengin & Donald Armstrong"
+        "name": "fengin & SkillfulPainter",
+        "url": "https://github.com/SkillfulPainter"
       },
       "license": "MIT",
       "host_application": {
