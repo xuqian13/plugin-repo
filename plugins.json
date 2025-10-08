@@ -226,5 +226,9 @@
   {
     "id": "Heximiao.keep_awake_plugin",
     "repositoryUrl": "https://github.com/Heximiao/keep_awake_plugin"
+  },
+  {
+    "id": "wikinty.title_plugin",
+    "repositoryUrl": "https://github.com/wikinty/title_plugin"
   }
 ]
