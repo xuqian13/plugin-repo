@@ -222,5 +222,9 @@
   {
     "id": "SkillfulPainter.metaso_search_plugin",
     "repositoryUrl": "https://github.com/SkillfulPainter/metaso_search_plugin"
+  },
+  {
+    "id": "Heximiao.keep_awake_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/keep_awake_plugin"
   }
 ]
