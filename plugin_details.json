@@ -2801,5 +2801,57 @@
         ]
       }
     }
+  },
+  {
+    "id": "Heximiao.keep_awake_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "keep_awake_plugin",
+      "display_name": "防休眠插件 (Keep Awake)",
+      "version": "4.0.0",
+      "description": "【仅限Windows】通过调用 SetThreadExecutionState API 来阻止电脑进入休眠或睡眠状态，确保麦麦在后台持续运行。",
+      "author": {
+        "name": "何夕",
+        "url": "https://github.com/Heximiao/keep_awake_plugin",
+        "email": "lcy1416603026@gmail.com"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.9.0",
+        "max_version": "0.10.3"
+      },
+      "entry": "plugin.py",
+      "homepage_url": "https://github.com/Heximiao/keep_awake_plugin",
+      "repository_url": "https://github.com/Heximiao/keep_awake_plugin",
+      "keywords": [
+        "windows",
+        "keep-awake",
+        "防休眠",
+        "后台",
+        "automation"
+      ],
+      "categories": [
+        "System",
+        "Utility",
+        "Automation"
+      ],
+      "default_locale": "zh-CN",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "utility",
+        "components": [
+          {
+            "type": "command",
+            "name": "KeepAwakeCommand",
+            "command_name": "/保持清醒",
+            "description": "控制防休眠后台任务的启动和停止。使用 `/保持清醒 on` 或 `/保持清醒 off`。"
+          }
+        ],
+        "features": [
+          "系统工具",
+          "Windows API 调用"
+        ]
+      }
+    }
   }
 ]
