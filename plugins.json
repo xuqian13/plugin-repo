@@ -220,8 +220,15 @@
     "repositoryUrl": "https://github.com/TAIY2020/custom_commands_plugin"
   },
   {
+    "id": "SkillfulPainter.metaso_search_plugin",
+    "repositoryUrl": "https://github.com/SkillfulPainter/metaso_search_plugin"
+  },
+  {
+    "id": "Heximiao.keep_awake_plugin",
+    "repositoryUrl": "https://github.com/Heximiao/keep_awake_plugin"
+  },
+  {
     "id": "wikinty.title_plugin",
     "repositoryUrl": "https://github.com/wikinty/title_plugin"
   }
-
 ]

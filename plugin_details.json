@@ -992,20 +992,20 @@
           {
             "type": "command",
             "name": "pic_generation_command",
-            "description": "风格化图生图命令：/pic <风格>",
-            "pattern": "/pic"
+            "description": "风格化图生图命令：/dr <风格>",
+            "pattern": "/dr"
           },
           {
             "type": "command",
             "name": "pic_config_command",
-            "description": "模型配置管理：/pic list、/pic set等",
-            "pattern": "/pic"
+            "description": "模型配置管理：/dr list、/dr set等",
+            "pattern": "/dr"
           },
           {
             "type": "command",
             "name": "pic_style_command",
-            "description": "风格管理：/pic styles、/pic style等",
-            "pattern": "/pic"
+            "description": "风格管理：/dr styles、/dr style等",
+            "pattern": "/dr"
           }
         ],
         "features": [
@@ -1058,7 +1058,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "Maizone（麦麦空间）",
-      "version": "2.4.2",
+      "version": "2.4.5",
       "description": "让你的麦麦发QQ空间，评论，点赞",
       "author": {
         "name": "internetsb",
@@ -1618,7 +1618,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "麦麦发B站视频",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "description": "让麦麦解析b站视频链接并发送，群聊私聊都可用",
       "author": {
         "name": "XinxInxiN0",
@@ -1626,10 +1626,11 @@
       },
       "license": "MIT",
       "host_application": {
-        "min_version": "0.9.0"
+        "min_version": "0.9.0",
+        "man_version": "0.10.3"
       },
-      "homepage_url": "https://github.com/MaiM-with-u/maibot",
-      "repository_url": "https://github.com/MaiM-with-u/maibot",
+      "homepage_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
+      "repository_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
       "config_file_name": "config.toml",
       "keywords": [
         "bilibili",
@@ -1657,9 +1658,9 @@
     "id": "XXXxx7258.google_search_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "Google 搜索以及缩写翻译插件 (Google Search and Abbreviation Translation Plugin)",
+      "name": "网页搜索以及缩写翻译以及图片搜索插件 (Web Search and Abbreviation Translation Plugin and...)",
       "version": "1.0.0",
-      "description": "支持多个搜索引擎的网络搜索以及聚合翻译搜索插件，具有自动降级功能。",
+      "description": "支持多个搜索引擎的网络搜索以及聚合翻译搜索以及图片搜索插件，具有自动降级功能。",
       "author": {
         "name": "晴空",
         "url": "https://github.com/XXXxx7258"
@@ -1675,6 +1676,7 @@
         "search",
         "web",
         "internet",
+        "图片",
         "查询",
         "搜索",
         "多引擎",
@@ -1685,7 +1687,8 @@
       "categories": [
         "Search",
         "Utilities",
-        "Translation"
+        "Translation",
+        "image"
       ],
       "default_locale": "zh-CN",
       "locales_path": "_locales",
@@ -2643,7 +2646,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "光遇查询插件",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "光遇工具(sky_tools_plugin)",
       "author": {
         "name": "寻",
@@ -2687,8 +2690,33 @@
           },
           {
             "type": "command",
-            "name": "大蜡",
+            "name": "candle",
             "description": "大蜡烛位置图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "ancestor",
+            "description": "复刻先祖信息获取命令"
+          },
+          {
+            "type": "command",
+            "name": "magic",
+            "description": "每日魔法图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "season_candle",
+            "description": "每日季蜡位置图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "calendar",
+            "description": "光遇日历图片获取命令"
+          },
+          {
+            "type": "command",
+            "name": "redstone",
+            "description": "红石位置图片获取命令"
           }
         ]
       }
@@ -2724,6 +2752,105 @@
       "locales_path": "_locales",
       "plugin_info": {
         "is_built_in": false
+      }
+    }
+  },
+  {
+    "id": "SkillfulPainter.metaso_search_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "Metaso 搜索插件 (Metaso Search Plugin)",
+      "version": "1.0.0",
+      "description": "提供基于 Metaso 的网页和学术搜索功能。",
+      "author": {
+        "name": "fengin & SkillfulPainter",
+        "url": "https://github.com/SkillfulPainter"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.8.0"
+      },
+      "keywords": [
+        "search",
+        "metaso",
+        "web",
+        "scholar",
+        "tool"
+      ],
+      "categories": [
+        "Tools",
+        "Search"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "tool",
+        "components": [
+          {
+            "type": "tool",
+            "name": "search_metaso",
+            "description": "从公开互联网上搜索即时性信息和通用知识。"
+          }
+        ],
+        "features": [
+          "网页搜索",
+          "学术搜索 (可配置)",
+          "AI总结",
+          "速率限制"
+        ]
+      }
+    }
+  },
+  {
+    "id": "Heximiao.keep_awake_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "keep_awake_plugin",
+      "display_name": "防休眠插件 (Keep Awake)",
+      "version": "4.0.0",
+      "description": "【仅限Windows】通过调用 SetThreadExecutionState API 来阻止电脑进入休眠或睡眠状态，确保麦麦在后台持续运行。",
+      "author": {
+        "name": "何夕",
+        "url": "https://github.com/Heximiao/keep_awake_plugin",
+        "email": "lcy1416603026@gmail.com"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.9.0",
+        "max_version": "0.10.3"
+      },
+      "entry": "plugin.py",
+      "homepage_url": "https://github.com/Heximiao/keep_awake_plugin",
+      "repository_url": "https://github.com/Heximiao/keep_awake_plugin",
+      "keywords": [
+        "windows",
+        "keep-awake",
+        "防休眠",
+        "后台",
+        "automation"
+      ],
+      "categories": [
+        "System",
+        "Utility",
+        "Automation"
+      ],
+      "default_locale": "zh-CN",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "utility",
+        "components": [
+          {
+            "type": "command",
+            "name": "KeepAwakeCommand",
+            "command_name": "/保持清醒",
+            "description": "控制防休眠后台任务的启动和停止。使用 `/保持清醒 on` 或 `/保持清醒 off`。"
+          }
+        ],
+        "features": [
+          "系统工具",
+          "Windows API 调用"
+        ]
       }
     }
   }
