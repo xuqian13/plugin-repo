@@ -218,6 +218,9 @@
   {
     "id": "custom_commands_plugin",
     "repositoryUrl": "https://github.com/TAIY2020/custom_commands_plugin"
+  },
+  {
+    "id": "SkillfulPainter.metaso_search_plugin",
+    "repositoryUrl": "https://github.com/SkillfulPainter/metaso_search_plugin"
   }
-
 ]
