@@ -2877,5 +2877,25 @@
       "repository_url": "https://github.com/wikinty/title_plugin",
       "default_locale": "CN"
     }
+  },
+  {
+    "id": "Kristen23557.MaiBot_Tarots_Plugin_REBORN",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "MaiBot-Tarots-Plugin-REBORN",
+      "version": "1.0.0",
+      "description": "提供高版本塔罗牌占卜功能,默认牌面为BiliBili幻星集",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "author": {
+        "name": "KArabella",
+        "url": "https://github.com/Kristen23557"
+      },
+      "license": "AGPL-v3.0",
+      "homepage_url": "https://github.com/Kristen23557",
+      "repository_url": "https://github.com/Kristen23557/MaiBot-Tarots-Plugin-REBORN",
+      "default_locale": "CN"
+    }
   }
 ]
