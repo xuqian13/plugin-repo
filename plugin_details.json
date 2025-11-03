@@ -1626,7 +1626,7 @@
       "license": "MIT",
       "host_application": {
         "min_version": "0.9.0",
-        "max_version": "0.10.3"
+        "max_version": "0.11.0"
       },
       "homepage_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
       "repository_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
@@ -1818,7 +1818,7 @@
           {
             "type": "tool",
             "name": "get_team_info",
-            "description": "���取战队信息和排名"
+            "description": "获取战队信息和排名"
           },
           {
             "type": "tool",
