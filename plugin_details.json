@@ -187,7 +187,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "塔罗牌插件",
-      "version": "1.3.0",
+      "version": "1.4.6",
       "description": "提供了抽塔罗牌占卜功能，具有模拟人类的调用方式和独特自定义风格的解牌回复。牌面为B站幻星集",
       "author": {
         "name": "A肆零西烛",
@@ -196,7 +196,7 @@
       "license": "AGPL-v3.0",
       "host_application": {
         "min_version": "0.9.1",
-        "max_version": "0.9.1"
+        "max_version": "0.11.0"
       },
       "keywords": [
         "tarot",
@@ -484,7 +484,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "宵禁插件",
-      "version": "1.3.0",
+      "version": "1.4.6",
       "description": "在机器人是QQ群聊管理员的情况下实现了自动宵禁功能",
       "author": {
         "name": "A肆零西烛",
@@ -493,7 +493,7 @@
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.9.1",
-        "max_version": "0.9.1"
+        "max_version": "0.11.0"
       },
       "keywords": [
         "mute",
@@ -518,7 +518,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "防戳插件",
-      "version": "1.3.0",
+      "version": "1.4.6",
       "description": "帮助你的麦麦实现人性化戳一戳互动的同时，避免过多戳一戳捣乱",
       "author": {
         "name": "A肆零西烛",
@@ -527,7 +527,7 @@
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.9.1",
-        "max_version": "0.9.1"
+        "max_version": "0.11.0"
       },
       "keywords": [
         "poke",
@@ -1626,7 +1626,7 @@
       "license": "MIT",
       "host_application": {
         "min_version": "0.9.0",
-        "max_version": "0.10.3"
+        "max_version": "0.11.0"
       },
       "homepage_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
       "repository_url": "https://github.com/XinxInxiN0/bilibili_video_sender_plugin",
@@ -2734,7 +2734,8 @@
       },
       "license": "MIT",
       "host_application": {
-        "min_version": "0.10.2"
+        "min_version": "0.10.2",
+        "max_version": "0.11.0"
       },
       "homepage_url": "https://github.com/TAIY2020/custom_commands_plugin",
       "repository_url": "https://github.com/TAIY2020/custom_commands_plugin",
@@ -2881,9 +2882,38 @@
     "id": "Kristen23557.MaiBot_Tarots_Plugin_REBORN",
     "manifest": {
       "manifest_version": 1,
+      "name": "塔罗牌插件(0.10.3复活版)",
+      "version": "1.0.0",
+      "description": "提供高版本塔罗牌占卜功能，牌面为BiliBili幻星集",
+      "author": {
+        "name": "KArabella",
+        "url": "https://github.com/Kristen23557"
+      },
+      "license": "AGPL-v3.0",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "keywords": [
+        "tarot",
+        "divination",
+        "moderation",
+        "bilibili"
+      ],
+      "categories": [
+        "Entertainment & Interaction"
+      ],
+      "repository_url": "https://github.com/Kristen23557/MaiBot-Tarots-Plugin-REBORN/",
+      "default_locale": "zh-CN",
+      "locales_path": "_locales"
+    }
+  },
+  {
+    "id": "Kristen23557.Werewolves-Master-Plugin",
+    "manifest": {
+      "manifest_version": 1,
       "name": "MaiBot-Tarots-Plugin-REBORN",
       "version": "1.0.0",
-      "description": "提供高版本塔罗牌占卜功能,默认牌面为BiliBili幻星集",
+      "description": "让麦麦帮你开展惊险刺激（并不）的狼人杀游戏！",
       "host_application": {
         "min_version": "0.10.0"
       },
@@ -2891,10 +2921,45 @@
         "name": "KArabella",
         "url": "https://github.com/Kristen23557"
       },
-      "license": "AGPL-v3.0",
+      "license": "MPL-2.0",
       "homepage_url": "https://github.com/Kristen23557",
-      "repository_url": "https://github.com/Kristen23557/MaiBot-Tarots-Plugin-REBORN",
+      "repository_url": "https://github.com/Kristen23557/Werewolves-Master-Plugin",
       "default_locale": "CN"
+    }
+  },
+  {
+    "id": "TAIY2020.group_muter_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "GroupMuter 插件 (group_muter_plugin)",
+      "version": "1.3.0",
+      "description": "一个允许管理员通过聊天命令，让麦麦在指定群聊中临时进入“静音状态”的群组管理插件。",
+      "author": {
+        "name": "TaiYang",
+        "url": "https://github.com/TAIY2020"
+      },
+      "license": "AGPL-3.0",
+      "host_application": {
+        "min_version": "0.11.0",
+        "max_version": "0.11.0"
+      },
+      "homepage_url": "https://github.com/TAIY2020/group_muter_plugin",
+      "repository_url": "https://github.com/TAIY2020/group_muter_plugin",
+      "keywords": [
+        "Mute",
+        "静音",
+        "群聊"
+      ],
+      "categories": [
+        "Utility Tools",
+        "Content Generation",
+        "Other"
+      ],
+      "default_locale": "zh-CN",
+      "locales_path": "_locales",
+      "plugin_info": {
+        "is_built_in": false
+      }
     }
   }
 ]
