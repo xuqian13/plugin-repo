@@ -1818,7 +1818,7 @@
           {
             "type": "tool",
             "name": "get_team_info",
-            "description": "获取战队信息和排名"
+            "description": "���取战队信息和排名"
           },
           {
             "type": "tool",
