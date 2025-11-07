@@ -1394,7 +1394,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "沉默插件",
-      "version": "0.9.8",
+      "version": "1.4.6",
       "description": "使麦麦更人性化地保持沉默",
       "author": {
         "name": "A肆零西烛",
@@ -1403,7 +1403,7 @@
       "license": "GPL-v3.0-or-later",
       "host_application": {
         "min_version": "0.9.1",
-        "max_version": "0.9.1"
+        "max_version": "0.11.1"
       },
       "keywords": [
         "silence"
@@ -2576,7 +2576,7 @@
     "id": "custom_commands_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "Custom Commands 插件 (custom_commands_plugin)",
+      "name": "自定义命令插件 (CustomCommandsPlugin)",
       "version": "1.5.2",
       "description": "一个允许你通过聊天命令动态添加、删除、列出和触发自定义回复的强大插件",
       "author": {
@@ -2782,7 +2782,7 @@
     "id": "TAIY2020.group_muter_plugin",
     "manifest": {
       "manifest_version": 1,
-      "name": "GroupMuter 插件 (group_muter_plugin)",
+      "name": "群聊静音插件 (GroupMuterPlugin)",
       "version": "1.3.0",
       "description": "一个允许管理员通过聊天命令，让麦麦在指定群聊中临时进入“静音状态”的群组管理插件。",
       "author": {
