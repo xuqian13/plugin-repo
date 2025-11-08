@@ -238,5 +238,9 @@
   {
     "id": "exynos967.animetrace_plugin",
     "repositoryUrl": "https://github.com/exynos967/animetrace_plugin"
+  },
+  {
+    "id": "xuqian13.context_clear_plugin",
+    "repositoryUrl": "https://github.com/xuqian13/context_clear_plugin"
   }
 ]
