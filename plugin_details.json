@@ -1087,7 +1087,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "戳一戳插件 (Poke_Plugin)",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "description": "适用于MaiBot 0.8.x or later 版本的戳一戳插件",
       "author": {
         "name": "Neorestim",
