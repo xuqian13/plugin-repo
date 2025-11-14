@@ -909,7 +909,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "Maizone（麦麦空间）",
-      "version": "2.4.5",
+      "version": "2.4.7",
       "description": "让你的麦麦发QQ空间，评论，点赞",
       "author": {
         "name": "internetsb",
@@ -1087,7 +1087,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "戳一戳插件 (Poke_Plugin)",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "description": "适用于MaiBot 0.8.x or later 版本的戳一戳插件",
       "author": {
         "name": "Neorestim",
@@ -1394,7 +1394,7 @@
     "manifest": {
       "manifest_version": 1,
       "name": "沉默插件",
-      "version": "1.4.6",
+      "version": "1.4.8",
       "description": "使麦麦更人性化地保持沉默",
       "author": {
         "name": "A肆零西烛",
@@ -2853,6 +2853,185 @@
             "description": "AnimeTrace image search tool"
           }
         ]
+      }
+    }
+  },
+  {
+    "id": "XXXxx7258.anan_sketchbook_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "安安素描本渲染插件 (Anan Sketchbook Renderer)",
+      "version": "0.1.0",
+      "description": "把麦麦输出渲染成素描本截图并发送图片回复。",
+      "author": {
+        "name": "晴空",
+        "url": "https://github.com/XXXxx7258"
+      },
+      "license": "MIT",
+      "host_application": {
+        "min_version": "0.10.0"
+      },
+      "homepage_url": "https://github.com/XXXxx7258/anan_sketchbook_plugin",
+      "repository_url": "https://github.com/XXXxx7258/anan_sketchbook_plugin",
+      "keywords": [
+        "sketchbook",
+        "render",
+        "anan"
+      ],
+      "categories": [
+        "Rendering",
+        "Fun"
+      ],
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "media",
+        "components": [
+          {
+            "type": "action",
+            "name": "anan_sketchbook_render",
+            "description": "把文字和可选图片绘制到安安素描本底图并发送图片回复"
+          }
+        ],
+        "features": [
+          "多表情差分底图",
+          "自动排版文本和图片",
+          "支持 LLM 控制的 mood / 文本 / 图片参数"
+        ]
+      }
+    }
+  },
+  {
+    "id": "saberlights.lolicon_setu_plugin",
+    "manifest": {
+      "manifest_version": 1,
+      "name": "Lolicon色图插件 (Lolicon Setu Plugin)",
+      "version": "2.1.1",
+      "description": "基于Lolicon API v2的高质量Pixiv图片获取插件。支持标签AND/OR组合搜索、关键词模糊搜索、长宽比筛选、AI作品排除、合并转发格式等功能。",
+      "author": {
+        "name": "久远",
+        "url": "https://github.com/saberlights"
+      },
+      "license": "MIT",
+      "homepage_url": "https://github.com/saberlights/lolicon-setu-plugin",
+      "repository_url": "https://github.com/saberlights/lolicon-setu-plugin",
+      "host_application": {
+        "name": "MaiBot",
+        "min_version": "0.8.0"
+      },
+      "keywords": [
+        "setu",
+        "pixiv",
+        "lolicon",
+        "image",
+        "picture",
+        "图片",
+        "色图",
+        "搜索",
+        "API"
+      ],
+      "categories": [
+        "Entertainment",
+        "Image"
+      ],
+      "default_locale": "zh-CN",
+      "plugin_info": {
+        "is_built_in": false,
+        "plugin_type": "entertainment",
+        "components": [
+          {
+            "type": "command",
+            "name": "setu",
+            "description": "从Lolicon API获取色图",
+            "pattern": "/setu",
+            "usage": "/setu [数量] [#标签] [关键词] [横图/竖图] [noai] [r18]",
+            "examples": [
+              "/setu - 获取1张随机图片",
+              "/setu help - 显示帮助信息",
+              "/setu 3 - 获取3张图片",
+              "/setu #萝莉 - 搜索萝莉标签",
+              "/setu 原神 - 搜索原神关键词",
+              "/setu #白丝,黑丝 - OR搜索",
+              "/setu 5 #风景 横图 - 组合筛选"
+            ]
+          }
+        ],
+        "features": [
+          "Pixiv高质量图源",
+          "标签AND/OR组合搜索",
+          "关键词模糊搜索（标题、作者、标签）",
+          "作者UID筛选",
+          "长宽比筛选（横图/竖图/方图/自定义）",
+          "AI作品控制（可排除AI作品）",
+          "R18内容控制（可配置允许）",
+          "合并转发格式发送",
+          "命令冷却管理",
+          "简短命令格式（#标签）",
+          "内置help命令",
+          "灵活配置选项",
+          "自定义图片代理服务器"
+        ],
+        "dependencies": {
+          "python": [
+            {
+              "name": "aiohttp",
+              "version": ">=3.8.0",
+              "required": true,
+              "description": "异步HTTP客户端，用于调用Lolicon API"
+            }
+          ],
+          "plugins": [],
+          "external_api": [
+            {
+              "name": "Lolicon API v2",
+              "url": "https://api.lolicon.app",
+              "description": "提供Pixiv图片数据服务"
+            }
+          ]
+        },
+        "config": {
+          "config_file": "config.toml",
+          "has_default_config": true
+        }
+      },
+      "permissions": [
+        "send.image",
+        "send.text",
+        "send.forward",
+        "network.http"
+      ],
+      "changelog": {
+        "2.1.1": {
+          "date": "2025-11-10",
+          "changes": [
+            "修复合并转发消息发送者显示问题",
+            "优化代码结构和错误处理",
+            "改进配置校验逻辑"
+          ]
+        },
+        "2.1.0": {
+          "date": "2025-11-09",
+          "changes": [
+            "新增简短命令格式（#标签代替tag:标签）",
+            "支持直接输入文本作为关键词（无需keyword:前缀）",
+            "新增 /setu help 帮助命令",
+            "支持多种帮助命令格式（help/帮助/?/？）",
+            "新增proxy配置，可自定义图片反代服务器",
+            "保持向后兼容旧的冒号格式",
+            "更新文档和使用示例"
+          ]
+        },
+        "2.0.0": {
+          "date": "2025-11-09",
+          "changes": [
+            "重写插件，改用Lolicon API v2",
+            "新增标签AND/OR组合搜索",
+            "新增关键词模糊搜索",
+            "新增长宽比筛选功能",
+            "新增AI作品排除选项",
+            "支持合并转发格式",
+            "全新的文档和使用说明"
+          ]
+        }
       }
     }
   }
